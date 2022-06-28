@@ -40,12 +40,13 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.php,
+		null_ls.builtins.diagnostics.pylint,
 		formatting.stylua,
-		formatting.standardjs,
 		formatting.black,
-		--formatting.phpcbf,
+		formatting.prettier.with({
+			extra_args = { "--bracket-same-line", "--use-tabs", "--print-width 150", "--tab-width 4", "--no-semi" },
+		}),
 		null_ls.builtins.diagnostics.shellcheck,
-		formatting.codespell.with({ filetypes = { "markdown" } }),
 		completion.tags,
 		null_ls.builtins.code_actions.gitsigns,
 	},
@@ -58,8 +59,8 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					--async_formatting()
-					vim.lsp.buf.formatting_seq_sync()
+					async_formatting()
+					--vim.lsp.buf.formatting_seq_sync()
 				end,
 			})
 		end
