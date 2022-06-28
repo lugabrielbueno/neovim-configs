@@ -1,4 +1,4 @@
-local loaded, null_ls = pcall(require,"null-ls")
+local loaded, null_ls = pcall(require, "null-ls")
 if not loaded then
 	return
 end
@@ -40,17 +40,8 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.php,
-		formatting.prettier.with({
-			filetypes = { "vue" },
-			extra_args = {
-
-				"--tab-width 4",
-				"--use-tabs",
-				"--no-semi",
-				"--print-width 200",
-			},
-		}),
 		formatting.stylua,
+		formatting.standardjs,
 		formatting.black,
 		--formatting.phpcbf,
 		null_ls.builtins.diagnostics.shellcheck,
@@ -67,8 +58,8 @@ null_ls.setup({
 				buffer = bufnr,
 				callback = function()
 					-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-					async_formatting()
-					--vim.lsp.buf.formatting_seq_sync()
+					--async_formatting()
+					vim.lsp.buf.formatting_seq_sync()
 				end,
 			})
 		end
