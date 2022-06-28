@@ -43,9 +43,6 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.pylint,
 		formatting.stylua,
 		formatting.black,
-		formatting.prettier.with({
-			extra_args = { "--bracket-same-line", "--use-tabs", "--print-width 150", "--tab-width 4", "--no-semi" },
-		}),
 		null_ls.builtins.diagnostics.shellcheck,
 		completion.tags,
 		null_ls.builtins.code_actions.gitsigns,
