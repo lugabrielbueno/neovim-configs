@@ -4,7 +4,7 @@ my configs for neovim
 ### What contains?
 **Highlight**: Tree-sitter  
 **LSP**: LSP with signature help
-**Completion**: cmp for completions with snippets
+**Completion**: cmp for completions with snippets  
 **Diagnostics**: floating window  
 **Colorschemes**: +50  
 **Navigate**: nvim-tree  
