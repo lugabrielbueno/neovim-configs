@@ -1,4 +1,9 @@
-require("telescope").setup({
+local loaded, telescope = pcall(require,"telescope")
+if not loaded then
+	return
+end
+
+telescope.setup({
 	defaults = {
 		layout_config = {
 			vertical = { width = 0.5 },

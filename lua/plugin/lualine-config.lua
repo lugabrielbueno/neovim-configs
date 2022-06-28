@@ -1,7 +1,8 @@
-local lualine = require("lualine")
-if not lualine then
+local loaded, lualine = pcall(require, "lualine")
+if not loaded then
 	return
 end
+
 require("lualine").setup({
 	options = {
 		component_separators = "|",

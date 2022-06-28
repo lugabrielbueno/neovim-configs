@@ -1,8 +1,11 @@
+local loaded, cmp = pcall(require,"cmp")
+if not loaded then
+	return
+end
 vim.opt.completeopt = { "menu", "menuone" }
 
 --vim.cmd('set completeopt=menu,menuone,noselect')
 
-local cmp = require("cmp")
 
 cmp.setup({
 	view = {

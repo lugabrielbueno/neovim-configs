@@ -1,5 +1,5 @@
-local gitsigns = require("gitsigns")
-if not gitsigns then
+local loaded, gitsigns = pcall(require,"gitsigns")
+if not loaded then
 	return
 end
 

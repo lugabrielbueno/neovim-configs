@@ -1,5 +1,5 @@
-local null_ls = require("null-ls")
-if not null_ls then
+local loaded, null_ls = pcall(require,"null-ls")
+if not loaded then
 	return
 end
 
