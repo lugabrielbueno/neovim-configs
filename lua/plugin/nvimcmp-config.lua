@@ -19,7 +19,6 @@ cmp.setup({
 				treesitter = "[Tree-sitter]",
 				luasnip = "[LuaSnip]",
 				nvim_lua = "[Lua]",
-				ultisnips = "[UltiSnips]",
 				buffer = "[Buffer]",
 				path = "[Path]",
 			},
@@ -70,7 +69,6 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "ultisnips" }, -- For ulti users.
 		{ name = "treesitter" },
 		{ name = "luasnip" }, -- For luasnip users.
 		{ name = "nvim_lua" },

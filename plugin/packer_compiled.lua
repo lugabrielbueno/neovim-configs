@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
-  ["cmp-nvim-ultisnips"] = {
-    loaded = true,
-    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/cmp-nvim-ultisnips",
-    url = "https://github.com/quangnguyen30192/cmp-nvim-ultisnips"
-  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/cmp-path",
@@ -153,11 +148,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nord-vim"] = {
     loaded = true,
@@ -234,11 +224,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/tmuxline.vim",
     url = "https://github.com/edkolev/tmuxline.vim"
-  },
-  ultisnips = {
-    loaded = true,
-    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/ultisnips",
-    url = "https://github.com/SirVer/ultisnips"
   },
   ["vim-colorschemes"] = {
     loaded = true,
