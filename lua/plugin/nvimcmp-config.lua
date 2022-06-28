@@ -1,11 +1,10 @@
-local loaded, cmp = pcall(require,"cmp")
+local loaded, cmp = pcall(require, "cmp")
 if not loaded then
 	return
 end
 vim.opt.completeopt = { "menu", "menuone" }
 
 --vim.cmd('set completeopt=menu,menuone,noselect')
-
 
 cmp.setup({
 	view = {
@@ -15,15 +14,15 @@ cmp.setup({
 		format = require("lspkind").cmp_format({
 			mode = "symbol_text",
 
-			--		menu = ({
-			--			buffer = "[Buffer]",
-			--			nvim_lsp = "[LSP]",
-			--			luasnip = "[LuaSnip]",
-			--			nvim_lua = "[Lua]",
-			--			latex_symbols = "[Latex]",
-			--	cmp_tabnine = "[TabNine]",
-			--	ultisnips = "[UltiSnips]",
-			--		})
+			menu = {
+				nvim_lsp = "[LSP]",
+				treesitter = "[Tree-sitter]",
+				luasnip = "[LuaSnip]",
+				nvim_lua = "[Lua]",
+				ultisnips = "[UltiSnips]",
+				buffer = "[Buffer]",
+				path = "[Path]",
+			},
 		}),
 	},
 	--		format = function(entry, vim_item)
@@ -71,7 +70,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "ultisnips" }, -- For vsnip users.
+		{ name = "ultisnips" }, -- For ulti users.
 		{ name = "treesitter" },
 		{ name = "luasnip" }, -- For luasnip users.
 		{ name = "nvim_lua" },

@@ -25,6 +25,7 @@ vim.diagnostic.config({
 		header = " Diagnostic",
 		prefix = "",
 		border = "rounded",
+		source = "always",
 	},
 })
 
