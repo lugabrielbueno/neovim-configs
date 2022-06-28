@@ -1,15 +1,20 @@
 # Neovim Configs
-my configs for neovim
+![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=flat&logo=neovim&logoColor=white) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=flat&logo=lua&logoColor=white)  
+My configs for neovim made in lua
+
+
 
 ## What contains?
-**Highlight**: Tree-sitter  
-**LSP**: LSP with signature help
-**Completion**: cmp for completions with snippets  
+**Highlight**: [Tree-sitter](https://github.com/nvim-treesitter)  
+**Formatter and Diagnostics hints**: [Null-ls](https://github.com/jose-elias-alvarez/null-ls.nvim)  
+**LSP**: [LSP](https://github.com/neovim/nvim-lspconfig) with signature help  
+**Completion**: [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) for completions with snippets  
 **Diagnostics**: floating window  
-**Git**: Gitsigns  
-**Colorschemes**: +50  
-**Navigate**: nvim-tree  
-**Status Line**: lua-line 
+**Git**: [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)  
+**Colorschemes**: +50  (actual is [onenord](https://github.com/rmehri01/onenord.nvim) )  
+**Navigate**: [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua)  
+**Status Line**: [lua-line](https://github.com/nvim-lualine/lualine.nvim)  
+**Plugin manager**: [Packer](https://github.com/wbthomason/packer.nvim)  
 
 
 ### LSP, Diagnostics, Autocompletion and a bunch of snippets
