@@ -6,8 +6,9 @@ my configs for neovim
 **LSP**: LSP with signature help
 **Completion**: cmp for completions with snippets  
 **Diagnostics**: floating window  
+**Git**: Gitsigns  
 **Colorschemes**: +50  
-**Navigate**: nvim-tree
+**Navigate**: nvim-tree  
 **Status Line**: lua-line 
 
 
