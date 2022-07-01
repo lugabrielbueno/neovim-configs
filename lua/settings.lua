@@ -28,16 +28,25 @@ vim.diagnostic.config({
 		source = "always",
 	},
 })
+--transparent background
+vim.cmd("hi Normal guibg=NONE ctermbg=NONE ")
+vim.g.cursorhold_updatetime = "100"
 
+
+
+local  colorscheme = 'onenord'
+
+local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme"..colorscheme)
+
+if not loaded_colorscheme then 
+	vim.notify("colorscheme "..colorscheme.." not found")
+	return
+end
 vim.cmd("colorscheme onenord")
 --vim.cmd('colorscheme everforest')
 --vim.cmd('colorscheme nordfox')
 --vim.cmd('colorscheme tender')
 --vim.cmd('colorscheme nord')
-
---transparent background
-vim.cmd("hi Normal guibg=NONE ctermbg=NONE ")
-vim.g.cursorhold_updatetime = "100"
 
 vim.cmd("highlight DiagnosticWarn  guifg=#fcb103")
 vim.cmd("highlight DiagnosticFloatingWarn guifg=#fcb103")

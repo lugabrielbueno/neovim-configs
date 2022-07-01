@@ -1,13 +1,44 @@
---Find files using Telescope command-line sugar.
 
-vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>fg", ":Telescope live_grep<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<leader>fh", ":Telescope help_tags<cr>", { noremap = true })
---local execute = vim.api.nvim_command
---	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
---end
-vim.cmd([[packadd packer.nvim]])
+
+local fn = vim.fn
+
+-- Automatically install packer
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+if fn.empty(fn.glob(install_path)) > 0 then
+  PACKER_BOOTSTRAP = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+  print "Installing packer close and reopen Neovim..."
+  vim.cmd [[packadd packer.nvim]]
+end
+
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]]
+
+-- Use a protected call so we don't error out on first use
+local packer_loaded, packer = pcall(require, "packer")
+if not packer_loaded then
+  return
+end
+
+-- Have packer use a popup window
+packer.init {
+  display = {
+    open_fn = function()
+      return require("packer.util").float { border = "rounded" }
+    end,
+  },
+}
 return require("packer").startup(function(use)
 	use({ "wbthomason/packer.nvim", opt = true })
 
@@ -30,9 +61,7 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/cmp-nvim-lua" })
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
-	--Finders
-	use({ "junegunn/fzf", { run = { "-> fzf#install()" } } })
-	use({ "junegunn/fzf.vim" })
+	--Finder
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	--Helpers
@@ -42,7 +71,7 @@ return require("packer").startup(function(use)
 	use({ "lewis6991/gitsigns.nvim" })
 
 	--Colors
-	use({ "rmehri01/onenord.nvim", { branch = "main" } })
+	use({ "rmehri01/onenord.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
@@ -53,9 +82,9 @@ return require("packer").startup(function(use)
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
-	--if packer_bootstrap then
-	--	require('packer').sync()
-	--end
+	if packer_bootstrap then
+		require('packer').sync()
+	end
 	--
 	--
 	--call all files
