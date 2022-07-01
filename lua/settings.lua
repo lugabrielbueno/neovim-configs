@@ -36,7 +36,7 @@ vim.g.cursorhold_updatetime = "100"
 
 local  colorscheme = 'onenord'
 
-local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme"..colorscheme)
+local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme "..colorscheme)
 
 if not loaded_colorscheme then 
 	vim.notify("colorscheme "..colorscheme.." not found")
