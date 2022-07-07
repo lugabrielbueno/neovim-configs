@@ -4,7 +4,7 @@ if not loaded then
 end
 vim.opt.completeopt = { "menu", "menuone" }
 
---vim.cmd('set completeopt=menu,menuone,noselect')
+vim.cmd("set completeopt=menu,menuone,noselect")
 
 cmp.setup({
 	view = {
