@@ -23,8 +23,12 @@ ls.add_snippets("php", {
 	s("new", {
 		t({ "<div class='page-content-wrapper'>" }),
 		t({ "", "    <div class='page-content'>" }),
+		t({ "", "    <h3 class='page-title'>" }),
+		i(1),
+		t({ "</h3>" }),
+		t({ "", "    <div class='page-content'>" }),
 		t({ "", "        <div class='row'>" }),
-		t({ "", "            <div class='col-md-12'>" }),
+		t({ "", "            <div class='col-md-12'>", "" }),
 		i(0),
 		t({ "", "            </div>" }),
 		t({ "", "         </div>" }),
