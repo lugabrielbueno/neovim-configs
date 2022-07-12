@@ -31,8 +31,6 @@ return require("packer").startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	--Finders
-	use({ "junegunn/fzf", { run = { "-> fzf#install()" } } })
-	use({ "junegunn/fzf.vim" })
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	--Helpers

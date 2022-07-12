@@ -2,7 +2,7 @@ local loaded, cmp = pcall(require, "cmp")
 if not loaded then
 	return
 end
-vim.opt.completeopt = { "menu", "menuone" }
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 --vim.cmd('set completeopt=menu,menuone,noselect')
 
