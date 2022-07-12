@@ -29,6 +29,14 @@ vim.diagnostic.config({
 	},
 })
 
+local colorscheme = "onenord"
+
+local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+
+if not loaded_colorscheme then
+	vim.notify("colorscheme " .. colorscheme .. " not found")
+	return
+end
 vim.cmd("colorscheme onenord")
 --vim.cmd('colorscheme everforest')
 --vim.cmd('colorscheme nordfox')

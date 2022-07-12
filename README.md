@@ -1,5 +1,5 @@
 # Neovim Configs
-![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=flat&logo=neovim&logoColor=white) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=flat&logo=lua&logoColor=white)  
+<a href='https://neovim.io/' target='_blank'>![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=flat&logo=neovim&logoColor=white)</a> <a href='https://www.lua.org/' target='_blank'>![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=flat&logo=lua&logoColor=white)</a>  
 My configs for neovim made in lua
 
 
