@@ -1,10 +1,10 @@
 local vim = vim
 vim.opt.number = true
 vim.opt.autoindent = true
-vim.opt.tabstop = 4
-vim.opt.shiftwidth = 4
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.smarttab = true
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 vim.opt.encoding = "UTF-8"
 vim.opt.syntax = "enable"
 vim.opt.termguicolors = true
