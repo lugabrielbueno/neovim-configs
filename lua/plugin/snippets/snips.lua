@@ -26,7 +26,7 @@ ls.add_snippets("php", {
 		t({ "", "    <h3 class='page-title'>" }),
 		i(1),
 		t({ "</h3>" }),
-		t({ "", "    <div class='page-content'>" }),
+		t({ "", "    <hr>" }),
 		t({ "", "        <div class='row'>" }),
 		t({ "", "            <div class='col-md-12'>", "" }),
 		i(0),
@@ -35,7 +35,6 @@ ls.add_snippets("php", {
 		t({ "", "    </div>" }),
 		t({ "", "</div>" }),
 	}),
-
 	s("foreach", {
 		t({ "foreach($" }),
 		i(1),
