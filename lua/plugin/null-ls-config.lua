@@ -43,6 +43,7 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.pylint,
 		formatting.stylua,
 		formatting.black,
+		formatting.djhtml,
 		null_ls.builtins.diagnostics.shellcheck,
 		completion.tags,
 		null_ls.builtins.code_actions.gitsigns,
