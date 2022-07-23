@@ -46,7 +46,9 @@ null_ls.setup({
 		formatting.deno_fmt.with({
 			extra_args = { "--options-line-width=300" },
 		}),
-		formatting.djhtml,
+		formatting.djhtml.with({
+			extra_args = { "--tabwidth=2" },
+		}),
 		null_ls.builtins.diagnostics.shellcheck,
 		completion.tags,
 		null_ls.builtins.code_actions.gitsigns,
