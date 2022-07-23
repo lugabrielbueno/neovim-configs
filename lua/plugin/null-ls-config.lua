@@ -43,6 +43,9 @@ null_ls.setup({
 		null_ls.builtins.diagnostics.pylint,
 		formatting.stylua,
 		formatting.black,
+		formatting.deno_fmt.with({
+			extra_args = { "--options-line-width=300" },
+		}),
 		formatting.djhtml,
 		null_ls.builtins.diagnostics.shellcheck,
 		completion.tags,
