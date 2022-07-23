@@ -1,4 +1,4 @@
-local loaded, telescope = pcall(require,"telescope")
+local loaded, telescope = pcall(require, "telescope")
 if not loaded then
 	return
 end
@@ -26,6 +26,9 @@ telescope.setup({
 			prompt_prefix = "🔭 ",
 		},
 		find_files = {
+			prompt_prefix = "🔭 ",
+		},
+		grep_string = {
 			prompt_prefix = "🔭 ",
 		},
 		-- Default configuration for builtin pickers goes here:
