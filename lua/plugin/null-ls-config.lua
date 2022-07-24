@@ -41,7 +41,7 @@ null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.php,
 		null_ls.builtins.diagnostics.pylint.with({
-			extra_args = { "--generated-members=objects", "--disable=C0111" }, --disable docstring diagnostic
+			extra_args = { "--max-line-length=300", "--generated-members=objects", "--disable=C0111" }, --disable docstring diagnostic
 		}),
 		formatting.stylua,
 		formatting.black.with({
