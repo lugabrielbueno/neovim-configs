@@ -40,7 +40,9 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.php,
-		null_ls.builtins.diagnostics.pylint,
+		null_ls.builtins.diagnostics.pylint.with({
+			extra_args = { "--generated-members=objects", "--disable=C0111" }, --disable docstring diagnostic
+		}),
 		formatting.stylua,
 		formatting.black,
 		formatting.deno_fmt.with({
