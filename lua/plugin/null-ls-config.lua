@@ -44,7 +44,9 @@ null_ls.setup({
 			extra_args = { "--generated-members=objects", "--disable=C0111" }, --disable docstring diagnostic
 		}),
 		formatting.stylua,
-		formatting.black,
+		formatting.black.with({
+			extra_args = { "--line-length=300" },
+		}),
 		formatting.deno_fmt.with({
 			extra_args = { "--options-line-width=300" },
 		}),
