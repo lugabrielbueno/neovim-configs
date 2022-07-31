@@ -2,6 +2,8 @@
 <a href='https://neovim.io/' target='_blank'>![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=flat&logo=neovim&logoColor=white)</a> <a href='https://www.lua.org/' target='_blank'>![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=flat&logo=lua&logoColor=white)</a>  
 My configs for neovim made in lua
 
+![neovim_open](https://user-images.githubusercontent.com/64340912/182046729-f161c034-6e4c-40a5-91f0-bef9d2e3f565.png)
+
 
 
 ## What contains?
