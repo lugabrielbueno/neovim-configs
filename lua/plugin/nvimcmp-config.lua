@@ -4,7 +4,6 @@ if not loaded then
 end
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
-
 cmp.setup({
 	view = {
 		entries = "custom", --native or wildmenu

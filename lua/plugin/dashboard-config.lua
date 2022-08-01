@@ -35,7 +35,7 @@ db.custom_center = {
 		icon = "📄  ",
 		desc = "New File                                ",
 		action = "enew",
-		shortcut = "<leader> n ",
+		shortcut = "<leader> n  ",
 	},
 	{
 		icon = "📁  ",
@@ -64,9 +64,9 @@ db.custom_center = {
 	},
 	{
 		icon = "  🛠️   ",
-		desc = "Open .config files                      ",
+		desc = "Open .config files                     ",
 		action = "edit " .. home .. "/.config",
-		shortcut = "<leader> f d",
+		shortcut = " <leader> f d ",
 	},
 }
 --      

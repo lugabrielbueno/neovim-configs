@@ -76,9 +76,9 @@ lspconfig.intelephense.setup({
 	capabilities = capabilities,
 
 	-- to set null-ls as default formatter
-	--	on_attach = function(client)
-	--		client.resolved_capabilities.document_formatting = false
-	--	end,
+	--on_attach = function(client)
+	--	client.resolved_capabilities.document_formatting = false
+	--end,
 })
 lspconfig.dockerls.setup({ capabilities = capabilities })
 lspconfig.bashls.setup({
