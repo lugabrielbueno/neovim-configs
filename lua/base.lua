@@ -15,8 +15,10 @@ vim.opt.cursorline = true
 vim.opt.shell = "zsh"
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
-vim.opt.pumblend = 25
+vim.opt.pumblend = 56
 vim.wo.wrap = false
+
+
 
 
 -- Hold the cursor for diagnostic
