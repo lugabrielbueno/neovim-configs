@@ -1,5 +1,6 @@
 require("plugins")
 require("lsp.lsp")
-require("settings")
+require("base")
+require("highlights")
 require("keymaps")
-require("plugin.snippets.snips")
+

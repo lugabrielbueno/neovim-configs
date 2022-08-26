@@ -1,5 +1,7 @@
 local vim = vim
+vim.cmd("autocmd!")
 vim.opt.number = true
+
 vim.opt.autoindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
@@ -10,11 +12,15 @@ vim.opt.syntax = "enable"
 vim.opt.termguicolors = true
 vim.opt.relativenumber = false
 vim.opt.cursorline = true
+vim.opt.shell = "zsh"
+vim.opt.winblend = 0
+vim.opt.wildoptions = "pum"
+vim.opt.pumblend = 25
 vim.wo.wrap = false
+
 
 -- Hold the cursor for diagnostic
 vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float()")
-
 vim.diagnostic.config({
 	virtual_text = false,
 	signs = true,
@@ -28,37 +34,17 @@ vim.diagnostic.config({
 		source = "always",
 	},
 })
-
 vim.g.tmuxline_theme = "vim_statusline_3"
 --transparent background
 vim.g.cursorhold_updatetime = "100"
-
 local colorscheme = "onenord"
-
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
 	return
 end
 vim.g.colorscheme = "onenord"
-vim.cmd("hi Normal guibg=NONE ctermbg=NONE ")
-vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE ")
 --vim.cmd('colorscheme everforest')
 --vim.cmd('colorscheme nordfox')
 --vim.cmd('colorscheme tender')
 --vim.cmd('colorscheme nord')
-vim.cmd("highlight DiagnosticWarn  guifg=#fcb103")
-vim.cmd("highlight DiagnosticFloatingWarn guifg=#fcb103")
-vim.cmd("highlight DiagnosticSignWarn  guisp=#fcb103 guifg=#fcc103")
-vim.cmd("highlight DiagnosticVirtualTextWarn  guifg=##fcb103")
-vim.cmd("highlight WarningMsg  guifg=#fcb103")
-vim.cmd("highlight LspDiagnosticsDefaultWarning  guifg=#fcb103")
-vim.cmd("highlight LspDiagnosticsUnderlineWarning  guisp=#fcb103 guifg=NONE")
-vim.cmd("highlight lualine_b_diagnostics_warn_normal guifg=#fcb103 guibg=#3F4758")
-vim.cmd("highlight lualine_b_diagnostics_warn_insert guifg=#fcb103 guibg=#3F4758")
-vim.cmd("highlight lualine_b_diagnostics_warn_visual guifg=#fcb103 guibg=#3F4758")
-vim.cmd("highlight lualine_b_diagnostics_warn_replace guifg=#fcb103 guibg=#3F4758")
-vim.cmd("highlight lualine_b_diagnostics_warn_command guifg=#fcb103 guibg=#3F4758")
-vim.cmd("highlight lualine_b_diagnostics_warn_terminal guifg=#fcb103 guibg=#3F4758")
-vim.cmd("highlight lualine_b_diagnostics_warn_inactive guifg=#fcb103 guibg=None")

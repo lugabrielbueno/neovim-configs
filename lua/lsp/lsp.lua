@@ -1,7 +1,4 @@
 --LSP installer plugin
---
---
-
 local loaded_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not loaded_lsp_installer then
 	return

@@ -15,17 +15,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	vim.cmd([[packadd packer.nvim]])
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
 
--- Use a protected call so we don't error out on first use
-local packer_loaded, packer = pcall(require, "packer")
-if not packer_loaded then
+local status, packer = pcall(require, "packer")
+if not status then
+	print("Packer is not installed")
 	return
 end
 
@@ -37,7 +30,8 @@ packer.init({
 		end,
 	},
 })
-return require("packer").startup(function(use)
+
+return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", opt = true })
 
 	-- LSP
@@ -64,7 +58,7 @@ return require("packer").startup(function(use)
 
 	--Helpers
 	use({ "windwp/nvim-autopairs" })
-	use({ "windwp/nvim-ts-autotag" })
+	--use({ "windwp/nvim-ts-autotag" })
 	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 
@@ -78,7 +72,6 @@ return require("packer").startup(function(use)
 	use({ "arcticicestudio/nord-vim" })
 	use({ "edkolev/tmuxline.vim" })
 	use({ "glepnir/dashboard-nvim" })
-
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
@@ -87,13 +80,13 @@ return require("packer").startup(function(use)
 	--
 	--
 	--call all files
-	require("plugin.treesitter-config")
-	require("plugin.lualine-config")
-	require("plugin.telescope-config")
-	require("plugin.nvimtree-config")
-	require("plugin.nvimcmp-config")
-	require("plugin.autopair-config")
-	require("plugin.null-ls-config")
-	require("plugin.gitsigns-config")
-	require("plugin.dashboard-config")
+	--require("plugin.treesitter-config")
+	--require("plugin.lualine-config")
+	--require("plugin.telescope-config")
+	--require("plugin.nvimtree-config")
+	--require("plugin.nvimcmp-config")
+	--require("plugin.autopair-config")
+	--require("plugin.null-ls-config")
+	--require("plugin.gitsigns-config")
+	--require("plugin.dashboard-config")
 end)
