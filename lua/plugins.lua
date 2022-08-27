@@ -15,7 +15,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	vim.cmd([[packadd packer.nvim]])
 end
 
-
 local status, packer = pcall(require, "packer")
 if not status then
 	print("Packer is not installed")
@@ -78,15 +77,4 @@ return packer.startup(function(use)
 		require("packer").sync()
 	end
 	--
-	--
-	--call all files
-	--require("plugin.treesitter-config")
-	--require("plugin.lualine-config")
-	--require("plugin.telescope-config")
-	--require("plugin.nvimtree-config")
-	--require("plugin.nvimcmp-config")
-	--require("plugin.autopair-config")
-	--require("plugin.null-ls-config")
-	--require("plugin.gitsigns-config")
-	--require("plugin.dashboard-config")
 end)

@@ -1,5 +1,4 @@
 local vim = vim
-vim.cmd("autocmd!")
 vim.opt.number = true
 vim.opt.autoindent = true
 vim.opt.tabstop = 2
@@ -16,9 +15,7 @@ vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 0
 vim.wo.wrap = false
-
 --vim.opt.background = 'dark'
---
 --
 --
 -- Hold the cursor for diagnostic
@@ -37,15 +34,14 @@ vim.diagnostic.config({
 	},
 })
 vim.g.tmuxline_theme = "vim_statusline_3"
---transparent background
 vim.g.cursorhold_updatetime = "100"
-local colorscheme = "onenord"
+local colorscheme = "everforest"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
 	return
 end
-vim.g.colorscheme = "onenord"
+vim.g.colorscheme = "everforest"
 --vim.cmd('colorscheme everforest')
 --vim.cmd('colorscheme nordfox')
 --vim.cmd('colorscheme tender')
