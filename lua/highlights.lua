@@ -1,11 +1,7 @@
 vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "VisualNOS", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "StatusLineTerm", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "StatusLineTermNC", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "WhichKeyFloat", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalNC", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "NONE", bg = "NONE" })
@@ -25,6 +21,7 @@ vim.api.nvim_set_hl(0, "lualine_b_diagnostics_warn_terminal", { fg = "#fcb103", 
 vim.api.nvim_set_hl(0, "lualine_b_diagnostics_warn_inactive", { fg = "#fcb103", bg = "#3F4758" })
 
 --vim.api.nvim_set_hl('highlight! CmpItemAbbrDeprecated bg=NONE =strikethrough fg=#808080')
+
 ---- blue
 --vim.api.nvim_set_hl('highlight! CmpItemAbbrMatch bg=NONE fg=#569CD6')
 --vim.api.nvim_set_hl('highlight! CmpItemAbbrMatchFuzzy bg=NONE fg=#569CD6')

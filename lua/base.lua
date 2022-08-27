@@ -12,11 +12,10 @@ vim.opt.termguicolors = true
 vim.opt.relativenumber = false
 vim.opt.cursorline = true
 vim.opt.shell = "zsh"
-vim.opt.winblend = 2
+vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 0
 vim.wo.wrap = false
-
 
 --vim.opt.background = 'dark'
 --
