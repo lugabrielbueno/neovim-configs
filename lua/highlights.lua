@@ -1,6 +1,5 @@
 vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE", bg = "NONE" })
-
---vim.api.nvim_set_hl(0, "Visual", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "LspSignatureActiveParameter", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "NONE", bg = "NONE" })
