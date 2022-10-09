@@ -11,7 +11,7 @@ vim.api.nvim_set_keymap("n", "<leader>fb", ":Telescope buffers<cr>", { noremap =
 vim.api.nvim_set_keymap("n", "<leader>fh", ":Telescope help_tags<cr>", { noremap = true, silent = true })
 
 --formatting
-vim.api.nvim_set_keymap("n", "<space>fm", ":lua vim.lsp.buf.formatting()<cr>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<space>fm", ":lua vim.lsp.buf.format({ async = true })<cr>", { noremap = true, silent = true })
 
 -- new file
 vim.api.nvim_set_keymap("n", "<leader>n", ":enew<cr>", { noremap = true, silent = true })

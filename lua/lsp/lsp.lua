@@ -50,7 +50,7 @@ lspconfig.sumneko_lua.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 	end,
 
 	settings = {
@@ -65,7 +65,7 @@ lspconfig.pyright.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
 
@@ -74,7 +74,7 @@ lspconfig.intelephense.setup({
 
 	-- to set null-ls as default formatter
 	--on_attach = function(client)
-	--	client.resolved_capabilities.document_formatting = false
+	--	client.server_capabilities.documentFormattingProvider = false
 	--end,
 })
 lspconfig.dockerls.setup({ capabilities = capabilities })
@@ -82,21 +82,21 @@ lspconfig.bashls.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
 --lspconfig.eslint_d.setup({
 --	capabilities = capabilities,
 --	-- to set null-ls as default formatter
 --	on_attach = function(client)
---		client.resolved_capabilities.document_formatting = false
+--		client.server_capabilities.documentFormattingProvider = false
 --	end,
 --})
 lspconfig.tsserver.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
 --lspconfig.stylelint_lsp.setup {capabilities = capabilities }
@@ -104,7 +104,7 @@ lspconfig.html.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
 lspconfig.cmake.setup({ capabilities = capabilities })
@@ -112,6 +112,6 @@ lspconfig.vuels.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
