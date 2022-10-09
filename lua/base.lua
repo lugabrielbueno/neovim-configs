@@ -11,6 +11,7 @@ vim.opt.termguicolors = true
 vim.opt.relativenumber = false
 vim.opt.cursorline = true
 vim.opt.shell = "zsh"
+vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 0
