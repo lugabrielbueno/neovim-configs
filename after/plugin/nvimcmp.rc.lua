@@ -47,8 +47,15 @@ cmp.setup({
 		end,
 	},
 	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+		documentation = {
+			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+			--border = "rounded",
+		},
+		completion = {
+			--border = "rounded",
+			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+		},
+		--documentation = cmp.config.window.bordered(),
 	},
 
 	mapping = cmp.mapping.preset.insert({
@@ -105,6 +112,6 @@ cmp.setup.cmdline(":", {
 	}),
 })
 
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers["signature_help"], {
-	border = "rounded",
-})
+--vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers["signature_help"], {
+--	border = "rounded",
+--})

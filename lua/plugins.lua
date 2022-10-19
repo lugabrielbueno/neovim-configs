@@ -38,6 +38,7 @@ return packer.startup(function(use)
 	use({ "williamboman/nvim-lsp-installer" })
 	use({ "onsails/lspkind.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
+	--use({ "ray-x/lsp_signature.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 
 	-- Completions, formatting and diagnostics

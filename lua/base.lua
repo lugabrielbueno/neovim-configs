@@ -14,7 +14,7 @@ vim.opt.shell = "zsh"
 vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
-vim.opt.pumblend = 0
+vim.opt.pumblend = 25
 vim.wo.wrap = false
 --vim.opt.background = 'dark'
 --
@@ -28,7 +28,7 @@ vim.diagnostic.config({
 	update_in_insert = false,
 	severity_sort = false,
 	float = {
-		header = " Diagnostic",
+		header = " Diagnostic ",
 		prefix = "",
 		border = "rounded",
 		source = "always",
