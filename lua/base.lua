@@ -14,7 +14,7 @@ vim.opt.shell = "zsh"
 vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
-vim.opt.pumblend = 25
+vim.opt.pumblend = 15
 vim.wo.wrap = false
 --vim.opt.background = 'dark'
 --
