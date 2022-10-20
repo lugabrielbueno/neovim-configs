@@ -1,5 +1,4 @@
 local fn = vim.fn
-
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -63,13 +62,11 @@ return packer.startup(function(use)
 	use({ "lewis6991/gitsigns.nvim" })
 
 	--Colors, icons and themes
-	use({ "rmehri01/onenord.nvim" })
+	--use({ "rmehri01/onenord.nvim" })
 	use({ "nvim-lualine/lualine.nvim" })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "flazz/vim-colorschemes" })
-	use({ "sainnhe/everforest" })
-	use({ "arcticicestudio/nord-vim" })
 	use({ "edkolev/tmuxline.vim" })
 	use({ "glepnir/dashboard-nvim" })
 	-- Automatically set up your configuration after cloning packer.nvim
