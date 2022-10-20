@@ -63,7 +63,7 @@ db.custom_center = {
 		action = "SessionLoad",
 	},
 	{
-		icon = "  🛠️   ",
+		icon = "  🛠️  ",
 		desc = "Open .config files                     ",
 		action = "edit " .. home .. "/.config",
 		shortcut = " <leader> f d ",
