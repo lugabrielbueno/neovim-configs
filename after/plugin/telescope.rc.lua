@@ -5,6 +5,7 @@ end
 
 telescope.setup({
 	defaults = {
+		selection_caret = "➜  ",
 		layout_config = {
 			vertical = { width = 0.5 },
 			-- other layout configuration here
