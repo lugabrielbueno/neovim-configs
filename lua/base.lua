@@ -36,10 +36,10 @@ vim.diagnostic.config({
 })
 vim.g.tmuxline_theme = "vim_statusline_3"
 vim.g.cursorhold_updatetime = "100"
-local colorscheme = "gruvbox"
+local colorscheme = "onenord"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
 	return
 end
-vim.g.colorscheme = "gruvbox"
+vim.g.colorscheme = "onenord"
