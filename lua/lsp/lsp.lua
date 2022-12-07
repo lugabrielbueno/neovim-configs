@@ -108,6 +108,7 @@ lspconfig.html.setup({
 	end,
 })
 lspconfig.cmake.setup({ capabilities = capabilities })
+lspconfig.lemminx.setup({ capabilities = capabilities })
 lspconfig.vuels.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
