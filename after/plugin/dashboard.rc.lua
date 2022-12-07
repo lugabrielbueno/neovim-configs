@@ -7,6 +7,8 @@ db.default_executive = "telescope"
 db.custom_header = {
 	"                                                       ",
 	"                                                       ",
+	"                                                       ",
+	"                                                       ",
 	" ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗",
 	" ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║",
 	" ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║",
@@ -18,7 +20,13 @@ db.custom_header = {
 	"                                                       ",
 	"                                                       ",
 }
-db.custom_footer = { "github.com/lugabrielbueno" }
+db.custom_footer = {
+	"                         ",
+	"                         ",
+	"                         ",
+	"github.com/lugabrielbueno",
+	"                         ",
+}
 
 local home = os.getenv("HOME")
 -- macos
@@ -30,40 +38,45 @@ local home = os.getenv("HOME")
 db.preview_file_height = 12
 db.preview_file_width = 80
 db.custom_center = {
-
 	{
-		icon = "📄  ",
+		--icon_hl = { fg = "white" },
+		icon = "  ",
 		desc = "New File                                ",
 		action = "enew",
 		shortcut = "<leader> n  ",
 	},
 	{
-		icon = "📁  ",
+		--icon_hl = { fg = "white" },
+		icon = "  ",
 		desc = "Find  File                              ",
 		action = "Telescope find_files find_command=rg,--hidden,--files",
 		shortcut = "<leader> f f",
 	},
 
 	{
-		icon = "🔎  ",
+		--icon_hl = { fg = "white" },
+		icon = "🔍 ",
 		desc = "Find  word                              ",
 		action = "Telescope live_grep",
 		shortcut = "<leader> l g",
 	},
 	{
-		icon = "🌳  ",
+		--icon_hl = { fg = "white" },
+		icon = "⑆  ",
 		desc = "Nvim Tree                               ",
 		action = "NvimTreeOpen",
 		shortcut = "<ctrl> t    ",
 	},
 	{
-		icon = "🕘  ",
+		--icon_hl = { fg = "white" },
+		icon = "  ",
 		desc = "Recently latest session                 ",
 		shortcut = "<leader> s l",
 		action = "SessionLoad",
 	},
 	{
-		icon = "  🛠️  ",
+		--icon_hl = { fg = "white" },
+		icon = " ⚙️  ",
 		desc = "Open .config files                     ",
 		action = "edit " .. home .. "/.config",
 		shortcut = " <leader> f d ",
