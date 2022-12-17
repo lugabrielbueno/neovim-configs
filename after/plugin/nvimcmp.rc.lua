@@ -14,7 +14,7 @@ cmp.setup({
 
 			menu = {
 				nvim_lsp = "[LSP]",
-				treesitter = "[Tree-sitter]",
+				--treesitter = "[Tree-sitter]",
 				luasnip = "[LuaSnip]",
 				nvim_lua = "[Lua]",
 				buffer = "[Buffer]",
@@ -74,7 +74,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		{ name = "treesitter" },
+		--{ name = "treesitter" },
 		{ name = "luasnip" }, -- For luasnip users.
 		{ name = "nvim_lua" },
 		{ name = "buffer" },
