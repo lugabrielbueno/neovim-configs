@@ -5,7 +5,12 @@ vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalNC", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "DiagnosticFloatingWarn", { fg = "#dbbc7f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticFloatingWarn", { fg = "#ceb42f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "LspDiagnosticsSignWarning", { fg = "#ceb42f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "LspDiagnosticsDefaultWarning", { fg = "#ceb42f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#ceb42f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "LspDiagnosticsSignWarn", { fg = "#ceb42f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "WarningMsg", { fg = "#ceb42f", bg = "NONE" })
 vim.api.nvim_set_hl(0, "DiagnosticFloatingError", { fg = "#e67e80", bg = "NONE" })
 vim.api.nvim_set_hl(0, "DiagnosticFloatingHint", { fg = "LightGrey", bg = "NONE" })
 vim.api.nvim_set_hl(0, "DiagnosticFloatingInfo", { fg = "LightBlue", bg = "NONE" })
@@ -23,3 +28,9 @@ vim.api.nvim_set_hl(0, "DashboardCenter", { bg = "NONE", fg = "#6c959b" })
 vim.api.nvim_set_hl(0, "DashboardFooter", { bg = "NONE", fg = "#278ead" })
 vim.api.nvim_set_hl(0, "DashboardShortcut", { bg = "NONE", fg = "#278ead" })
 vim.api.nvim_set_hl(0, "DashboardHeader", { bg = "NONE", fg = "#d6d6d6" })
+vim.api.nvim_set_hl(
+	0,
+	"HeaderDiagnosticOpenFloat",
+	{ strikethrough = true, bg = "NONE", fg = "#ceb42f", bold = true, underdouble = true }
+)
+--"#dbbc7f"

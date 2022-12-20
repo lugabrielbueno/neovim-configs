@@ -28,7 +28,7 @@ vim.diagnostic.config({
 	update_in_insert = false,
 	severity_sort = false,
 	float = {
-		header = " Diagnostic ",
+		header = { " Diagnostic", "HeaderDiagnosticOpenFloat" },
 		prefix = "",
 		border = "rounded",
 		source = "always",
