@@ -20,7 +20,10 @@ vim.wo.wrap = false
 --
 --
 -- Hold the cursor for diagnostic
+--
+
 vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float()")
+
 vim.diagnostic.config({
 	virtual_text = false,
 	signs = true,
@@ -35,7 +38,7 @@ vim.diagnostic.config({
 	},
 })
 vim.g.tmuxline_theme = "vim_statusline_3"
-vim.g.cursorhold_updatetime = "100"
+vim.g.cursorhold_updatetime = "130"
 local colorscheme = "onenord"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
