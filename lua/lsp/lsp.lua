@@ -115,10 +115,12 @@ lspconfig.vuels.setup({
 		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
-lspconfig.hls.setup({
-	capabilities = capabilities,
-	-- to set null-ls as default formatter
-	on_attach = function(client)
-		client.server_capabilities.documentFormattingProvider = false
-	end,
-})
+
+-- Haskell
+--lspconfig.hls.setup({
+--	capabilities = capabilities,
+--	-- to set null-ls as default formatter
+--	on_attach = function(client)
+--		client.server_capabilities.documentFormattingProvider = false
+--	end,
+--})
