@@ -7,7 +7,6 @@ vim.api.nvim_set_hl(0, "NormalNC", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = "NONE", bg = "NONE" })
 
-
 -- Warning
 vim.api.nvim_set_hl(0, "LspDiagnosticsSignWarning", { fg = "#ceb42f", bg = "NONE" })
 vim.api.nvim_set_hl(0, "LspDiagnosticsDefaultWarning", { fg = "#ceb42f", bg = "NONE" })
@@ -24,14 +23,13 @@ vim.api.nvim_set_hl(0, "LspDiagnosticsSignError", { fg = "#e67e80", bg = "NONE" 
 vim.api.nvim_set_hl(0, "ErrorMsg", { fg = "#e67e80", bg = "NONE" })
 vim.api.nvim_set_hl(0, "DiagnosticFloatingError", { fg = "#e67e80", bg = "NONE" })
 
-
 -- Hint
-vim.api.nvim_set_hl(0, "LspDiagnosticsSignHint", { fg = "Purple", bg = "NONE" })
-vim.api.nvim_set_hl(0, "LspDiagnosticsDefaultHint", { fg = "Purple", bg = "NONE" })
-vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "Purple", bg = "NONE" })
-vim.api.nvim_set_hl(0, "LspDiagnosticsSignHint", { fg = "Purple", bg = "NONE" })
-vim.api.nvim_set_hl(0, "HintMsg", { fg = "Purple", bg = "NONE" })
-vim.api.nvim_set_hl(0, "DiagnosticFloatingHint", { fg = "Purple", bg = "NONE" })
+vim.api.nvim_set_hl(0, "LspDiagnosticsSignHint", { fg = "#967499", bg = "NONE" })
+vim.api.nvim_set_hl(0, "LspDiagnosticsDefaultHint", { fg = "#967499", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#967499", bg = "NONE" })
+vim.api.nvim_set_hl(0, "LspDiagnosticsSignHint", { fg = "#967499", bg = "NONE" })
+vim.api.nvim_set_hl(0, "HintMsg", { fg = "#967499", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticFloatingHint", { fg = "#967499", bg = "NONE" })
 
 -- Info
 vim.api.nvim_set_hl(0, "LspDiagnosticsSignInfo", { fg = "LightBlue", bg = "NONE" })
