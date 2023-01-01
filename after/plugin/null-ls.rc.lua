@@ -48,8 +48,8 @@ null_ls.setup({
 		formatting.black.with({
 			extra_args = { "--line-length=300" },
 		}),
-		formatting.deno_fmt.with({
-			extra_args = { "--options-line-width=300" },
+		formatting.prettier.with({
+			extra_args = { "--print-width=300" },
 		}),
 		formatting.djhtml.with({
 			extra_args = { "--tabwidth=2" },
