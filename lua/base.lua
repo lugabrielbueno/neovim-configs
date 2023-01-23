@@ -22,7 +22,7 @@ vim.wo.wrap = false
 -- Hold the cursor for diagnostic
 --
 
-vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float()")
+--vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float()")
 
 vim.diagnostic.config({
 	virtual_text = false,
@@ -30,12 +30,12 @@ vim.diagnostic.config({
 	underline = true,
 	update_in_insert = false,
 	severity_sort = false,
-	float = {
-		header = { " Diagnostic", "HeaderDiagnosticOpenFloat" },
-		prefix = "",
-		border = "rounded",
-		source = "always",
-	},
+	--float = {
+	--	header = { " Diagnostic", "HeaderDiagnosticOpenFloat" },
+	--	prefix = "",
+	--	border = "rounded",
+	--	source = "always",
+	--},
 })
 vim.g.tmuxline_theme = "vim_statusline_3"
 vim.g.cursorhold_updatetime = "130"

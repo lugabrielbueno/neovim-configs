@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	--use({ "windwp/nvim-ts-autotag" })
 	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
+	use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	--Colors, icons and themes
 	use({ "rmehri01/onenord.nvim" })
