@@ -9,7 +9,7 @@ lspsaga.setup({
 		-- this option only work in neovim 0.9
 		title = true,
 		-- border type can be single,double,rounded,solid,shadow.
-		border = "solid",
+		border = "rounded",
 		winblend = 0,
 		expand = "",
 		collapse = "",
@@ -35,5 +35,20 @@ lspsaga.setup({
 			black = "#1c1c19",
 		},
 		kind = {},
+	},
+	code_action = {
+		num_shortcut = true,
+		keys = {
+			-- string |table type
+			quit = "q",
+			exec = "<CR>",
+		},
+	},
+	lightbulb = {
+		enable = false,
+		enable_in_insert = true,
+		sign = true,
+		sign_priority = 40,
+		virtual_text = true,
 	},
 })
