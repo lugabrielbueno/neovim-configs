@@ -17,7 +17,7 @@ keymap("n", "<leader>fh", ":Telescope help_tags<cr>", { noremap = true, silent =
 vim.api.nvim_set_keymap(
 	"n",
 	"<space>fm",
-	":lua vim.lsp.buf.format({ async = true })<cr>",
+	":lua vim.lsp.buf.format({ async = true })<cr> :w<cr>",
 	{ noremap = true, silent = true }
 )
 

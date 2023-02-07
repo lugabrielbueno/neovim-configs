@@ -37,12 +37,16 @@ return packer.startup(function(use)
 	use({ "williamboman/nvim-lsp-installer" })
 	use({ "onsails/lspkind.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
-	--use({ "ray-x/lsp_signature.nvim" })
-	use({ "hrsh7th/cmp-nvim-lsp-signature-help" })
 
 	-- Completions, formatting and diagnostics
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-	use({ "L3MON4D3/LuaSnip" })
+	use({
+		"L3MON4D3/LuaSnip",
+		-- follow latest release.
+		tag = "v<CurrentMajor>.*",
+		-- install jsregexp (optional!:).
+		run = "make install_jsregexp",
+	})
 	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-buffer" })
 	use({ "saadparwaiz1/cmp_luasnip" })
@@ -54,22 +58,27 @@ return packer.startup(function(use)
 
 	--Finder
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
+	use({ "BurntSushi/ripgrep" })
+	use({ "nvim-telescope/telescope-fzf-native.nvim" })
 
 	--Helpers
 	use({ "windwp/nvim-autopairs" })
 	--use({ "windwp/nvim-ts-autotag" })
-	use({ "antoinemadec/FixCursorHold.nvim" })
+	--	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	--Colors, icons and themes
-	use({ "rmehri01/onenord.nvim" })
-	use({ "nvim-lualine/lualine.nvim" })
+	--	use({ "rmehri01/onenord.nvim" })
+	use({ "sainnhe/everforest" })
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
-	--use({ "flazz/vim-colorschemes" })
 	use({ "edkolev/tmuxline.vim" })
-	use({ "glepnir/dashboard-nvim" })
+	--use({ "glepnir/dashboard-nvim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
