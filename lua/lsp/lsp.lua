@@ -45,7 +45,7 @@ local capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_c
 
 --setting up all LSP needed
 
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
