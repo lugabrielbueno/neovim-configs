@@ -40,7 +40,6 @@ local completion = null_ls.builtins.completion
 null_ls.setup({
 	sources = {
 		null_ls.builtins.diagnostics.php,
-		null_ls.builtins.formatting.fourmolu,
 		null_ls.builtins.diagnostics.pylint.with({
 			extra_args = { "--max-line-length=300", "--generated-members=objects", "--disable=C0111" }, --disable docstring diagnostic
 		}),
@@ -54,6 +53,7 @@ null_ls.setup({
 		formatting.djhtml.with({
 			extra_args = { "--tabwidth=2" },
 		}),
+		formatting.brittany,
 		completion.tags,
 		null_ls.builtins.code_actions.gitsigns,
 	},
