@@ -78,7 +78,7 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "kyazdani42/nvim-tree.lua" })
 	use({ "edkolev/tmuxline.vim" })
-	--use({ "glepnir/dashboard-nvim" })
+	use({ "glepnir/dashboard-nvim" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
