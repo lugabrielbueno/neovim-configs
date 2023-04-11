@@ -35,6 +35,10 @@ return packer.startup(function(use)
 	-- LSP
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/nvim-lsp-installer" })
+	use({
+		"williamboman/mason.nvim",
+		run = ":MasonUpdate", -- :MasonUpdate updates registry contents
+	})
 	use({ "onsails/lspkind.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
 
@@ -66,7 +70,7 @@ return packer.startup(function(use)
 	--use({ "windwp/nvim-ts-autotag" })
 	--	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
+	--use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	--Colors, icons and themes
 	--	use({ "rmehri01/onenord.nvim" })

@@ -1,9 +1,12 @@
 --LSP installer plugin
 local loaded_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
-if not loaded_lsp_installer then
+local loaded_mason, mason = pcall(require, "mason")
+
+if not loaded_lsp_installer or not loaded_mason then
 	return
 end
 
+mason.setup()
 lsp_installer.setup({
 	automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
 	ui = {
@@ -121,4 +124,19 @@ lspconfig.hls.setup({
 	on_attach = function(client)
 		client.server_capabilities.documentFormattingProvider = false
 	end,
+})
+local _border = "rounded"
+
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = _border,
+	relative = "win",
+})
+
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+	border = _border,
+	relative = "win",
+})
+
+vim.diagnostic.config({
+	float = { border = _border },
 })

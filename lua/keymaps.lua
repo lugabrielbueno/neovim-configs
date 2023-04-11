@@ -21,67 +21,40 @@ vim.api.nvim_set_keymap(
 	{ noremap = true, silent = true }
 )
 
--- LspSaga
--- Lsp finder find the symbol definition implement reference
--- if there is no implement it will hide
--- when you use action in finder like open vsplit then you can
--- use <C-t> to jump back
-keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { noremap = true, silent = true })
+-- Global mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
+vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
--- Code action
-vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>", { noremap = true, silent = true })
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd("LspAttach", {
+	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+	callback = function(ev)
+		-- Enable completion triggered by <c-x><c-o>
+		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
--- Rename
-keymap("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", { noremap = true, silent = true })
-
--- Rename word in whole project
-keymap("n", "<leader>rr", "<cmd>Lspsaga rename ++project<CR>", { noremap = true, silent = true })
-
--- Peek Definition
--- you can edit the definition file in this float window
--- also support open/vsplit/etc operation check definition_action_keys
--- support tagstack C-t jump back
-keymap("n", "<C-g>", "<cmd>Lspsaga peek_definition<CR>", { noremap = true, silent = true })
-
--- Go to Definition
-keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", { noremap = true, silent = true })
-
--- Show line diagnostics you can pass argument ++unfocus to make
--- show_line_diagnostics float window unfocus
-keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", { noremap = true, silent = true })
-
--- Show cursor diagnostic
--- also like show_line_diagnostics  support pass ++unfocus
-keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { noremap = true, silent = true })
-
--- Show buffer diagnostic
-keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { noremap = true, silent = true })
-
--- Diagnostic jump can use `<c-o>` to jump back
-keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { noremap = true, silent = true })
-keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { noremap = true, silent = true })
-
--- Toggle Outline
-keymap("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { noremap = true, silent = true })
-
--- Hover Doc
--- if there has no hover will have a notify no information available
--- to disable it just Lspsaga hover_doc ++quiet
--- press twice it will jump into hover window
---keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = true })
--- if you want keep hover window in right top you can use ++keep arg
--- notice if you use hover with ++keep you press this keymap it will
--- close the hover window .if you want jump to hover window must use
--- wincmd command <C-w>w
-keymap("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>", { noremap = true, silent = true })
-
--- Callhierarchy
-keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>", { noremap = true, silent = true })
-keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>", { noremap = true, silent = true })
-
--- Float terminal
-vim.keymap.set({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>", { noremap = true, silent = true })
-
+		-- Buffer local mappings.
+		-- See `:help vim.lsp.*` for documentation on any of the below functions
+		local opts = { buffer = ev.buf }
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+		vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+		vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
+		vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
+		vim.keymap.set("n", "<leader>wl", function()
+			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+		end, opts)
+		vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
+		vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+		vim.keymap.set({ "n", "v" }, "<space>ca", vim.lsp.buf.code_action, opts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+	end,
+})
 -- new file
 keymap("n", "<leader>n", ":enew<cr>", { noremap = true, silent = true })
 
