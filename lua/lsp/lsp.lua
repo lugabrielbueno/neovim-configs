@@ -19,14 +19,6 @@ lsp_installer.setup({
 	},
 })
 
---some examples of symbols
---⚠
---✖
---
---ⓘ
---●
---
---
 ---- symbols to LSP dignostic
 local loaded_config, lspconfig = pcall(require, "lspconfig")
 if not loaded_config then

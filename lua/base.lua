@@ -15,7 +15,7 @@ vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 15
-vim.wo.wrap = false
+vim.wo.wrap = true
 vim.opt.hidden = false
 --vim.opt.background = 'dark'
 --
@@ -38,7 +38,6 @@ vim.diagnostic.config({
 	--	source = "always",
 	--},
 })
-vim.g.tmuxline_theme = "vim_statusline_3"
 vim.g.cursorhold_updatetime = "130"
 local colorscheme = "everforest"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
