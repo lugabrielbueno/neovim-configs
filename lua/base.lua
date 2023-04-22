@@ -15,7 +15,7 @@ vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
 vim.opt.pumblend = 15
-vim.wo.wrap = true
+vim.wo.wrap = false
 vim.opt.hidden = false
 --vim.opt.background = 'dark'
 --

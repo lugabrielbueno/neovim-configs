@@ -35,15 +35,20 @@ local async_formatting = function(bufnr)
 end
 
 local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local completion = null_ls.builtins.completion
 null_ls.setup({
 	sources = {
-		null_ls.builtins.diagnostics.php,
+		null_ls.builtins.diagnostics.php.with({
+			extra_args = { "--max-line-length=300" },
+		}),
 		null_ls.builtins.diagnostics.pylint.with({
 			extra_args = { "--max-line-length=300", "--generated-members=objects", "--disable=C0111" }, --disable docstring diagnostic
 		}),
 		formatting.stylua,
+		formatting.shfmt,
+		diagnostics.shellcheck,
 		formatting.black.with({
 			extra_args = { "--line-length=300" },
 		}),
