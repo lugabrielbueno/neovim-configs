@@ -1,4 +1,9 @@
-require("dashboard").setup({
+local loaded, dashboard = pcall(require, "dashboard")
+if not loaded then
+	return
+end
+
+dashboard.setup({
 	-- config
 	theme = "doom", --  theme is doom and hyper default is hyper
 	config = {
