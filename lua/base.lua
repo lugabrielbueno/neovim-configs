@@ -38,8 +38,7 @@ vim.diagnostic.config({
 	--	source = "always",
 	--},
 })
-vim.g.cursorhold_updatetime = "130"
-local colorscheme = "everforest"
+local colorscheme = "catppuccin-macchiato"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")

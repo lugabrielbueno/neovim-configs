@@ -47,8 +47,8 @@ require("dashboard").setup({
 				desc = "Find String          ",
 				desc_hl = "String",
 				key = "s",
-				keymap = "   <leader> g s ",
-				action = ":Telescope grep_string",
+				keymap = "   <leader> f s ",
+				action = ":Telescope live_grep",
 			},
 			{
 				icon = "  ",

@@ -1,21 +1,36 @@
 local status, packer = pcall(require, "packer")
-if not status then
-	print("Packer is not installed")
-	return
-end
 
 local ensure_packer = function()
 	local fn = vim.fn
+	-- Have packer use a popup window
 	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+
 	if fn.empty(fn.glob(install_path)) > 0 then
 		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
 		vim.cmd([[packadd packer.nvim]])
 		return true
 	end
+
+	packer.init({
+		snapshot_path = fn.stdpath("config") .. "/snapshots",
+		max_jobs = 50,
+		display = {
+			open_fn = function()
+				return require("packer.util").float({ border = "rounded" })
+			end,
+			prompt_border = "rounded", -- Border style of prompt popups.
+		},
+	})
+
 	return false
 end
 
 local packer_bootstrap = ensure_packer()
+
+if not status then
+	print("Packer is not installed")
+	return
+end
 
 return packer.startup(function(use)
 	use({ "wbthomason/packer.nvim", opt = true })
@@ -55,7 +70,7 @@ return packer.startup(function(use)
 
 	--Helpers
 	use({ "windwp/nvim-autopairs" })
-	--use({ "windwp/nvim-ts-autotag" })
+	use({ "windwp/nvim-ts-autotag" })
 	--	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 	--use({ "glepnir/lspsaga.nvim", branch = "main" })
@@ -63,6 +78,8 @@ return packer.startup(function(use)
 	--Colors, icons and themes
 	--	use({ "rmehri01/onenord.nvim" })
 	use({ "sainnhe/everforest" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
+
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },

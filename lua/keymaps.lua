@@ -8,8 +8,7 @@ keymap("n", "<c-f>", ":NvimTreeFocus<cr>", { noremap = true, silent = true })
 
 --Find files using Telescope command-line sugar.
 keymap("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true, silent = true })
-keymap("n", "<leader>lg", ":Telescope live_grep<cr>", { noremap = true, silent = true })
-keymap("n", "<leader>gs", ":Telescope grep_string<cr>", { noremap = true, silent = true })
+keymap("n", "<leader>fs", ":Telescope live_grep<cr>", { noremap = true, silent = true })
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, silent = true })
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", { noremap = true, silent = true })
 
