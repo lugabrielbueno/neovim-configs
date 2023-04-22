@@ -49,9 +49,7 @@ return packer.startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use({
 		"L3MON4D3/LuaSnip",
-		-- follow latest release.
 		tag = "v<CurrentMajor>.*",
-		-- install jsregexp (optional!:).
 		run = "make install_jsregexp",
 	})
 	use({ "hrsh7th/nvim-cmp" })
@@ -71,25 +69,22 @@ return packer.startup(function(use)
 	--Helpers
 	use({ "windwp/nvim-autopairs" })
 	use({ "windwp/nvim-ts-autotag" })
-	--	use({ "antoinemadec/FixCursorHold.nvim" })
 	use({ "lewis6991/gitsigns.nvim" })
 	use({
 		"folke/noice.nvim",
 		requires = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
 			"rcarriga/nvim-notify",
 		},
 	})
-	--use({ "glepnir/lspsaga.nvim", branch = "main" })
+	use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	--Colors, icons and themes
+	use ({'AlexvZyl/nordic.nvim'})
+
 	--	use({ "rmehri01/onenord.nvim" })
-	use({ "sainnhe/everforest" })
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	--use({ "sainnhe/everforest" })
+	--use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use({
 		"nvim-lualine/lualine.nvim",

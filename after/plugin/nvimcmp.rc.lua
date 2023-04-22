@@ -3,10 +3,9 @@ if not loaded then
 	return
 end
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
-
 cmp.setup({
 	view = {
-		entries = "custom", --native or wildmenu
+		entries = "custom", --native or wildmenu or custom
 	},
 	formatting = {
 		format = require("lspkind").cmp_format({
@@ -14,7 +13,7 @@ cmp.setup({
 
 			menu = {
 				nvim_lsp = "[LSP]",
-				--treesitter = "[Tree-sitter]",
+				treesitter = "[Tree-sitter]",
 				luasnip = "[LuaSnip]",
 				nvim_lua = "[Lua]",
 				buffer = "[Buffer]",
@@ -30,6 +29,7 @@ cmp.setup({
 	--vim_item.menu = ({
 	--	ultisnips = "[UltiSnips]",
 	--	nvim_lsp = "[LSP]",
+	--
 	--	buffer = "[Buffer]",
 	--	nvim_lua = "[Lua]",
 	--	cmp_tabnine = "[TabNine]",
@@ -47,15 +47,16 @@ cmp.setup({
 		end,
 	},
 	window = {
-		documentation = {
-			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-			--border = "rounded",
-		},
-		completion = {
-			--border = "rounded",
-			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-		},
-		--documentation = cmp.config.window.bordered(),
+		--	documentation = {
+		--		winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+		--		border = "rounded",
+		--	},
+		--	completion = {
+		--		border = "rounded",
+		--		winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+		--	},
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
 	},
 
 	mapping = cmp.mapping.preset.insert({
@@ -74,7 +75,7 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
-		--{ name = "treesitter" },
+		{ name = "treesitter" },
 		{ name = "luasnip" }, -- For luasnip users.
 		{ name = "nvim_lua" },
 		{ name = "buffer" },

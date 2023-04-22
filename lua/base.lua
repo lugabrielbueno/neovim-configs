@@ -12,18 +12,12 @@ vim.opt.relativenumber = false
 vim.opt.cursorline = true
 vim.opt.shell = "zsh"
 vim.opt.mouse = {}
-vim.opt.winblend = 0
-vim.opt.wildoptions = "pum"
-vim.opt.pumblend = 15
+--vim.opt.winblend = 0
+--vim.opt.wildoptions = "pum"
+--vim.opt.pumblend = 15
 vim.wo.wrap = false
 vim.opt.hidden = false
---vim.opt.background = 'dark'
---
---
--- Hold the cursor for diagnostic
---
-
---vim.cmd("autocmd CursorHold * lua vim.diagnostic.open_float()")
+--vim.opt.background = "dark"
 
 vim.diagnostic.config({
 	virtual_text = false,
@@ -31,17 +25,17 @@ vim.diagnostic.config({
 	underline = true,
 	update_in_insert = false,
 	severity_sort = false,
-	--float = {
-	--	header = { " Diagnostic", "HeaderDiagnosticOpenFloat" },
-	--	prefix = "",
-	--	border = "rounded",
-	--	source = "always",
-	--},
+	float = {
+		header = { "  Diagnostics", "HeaderDiagnosticOpenFloat" },
+		prefix = "",
+		border = "rounded",
+		source = "always",
+	},
 })
-local colorscheme = "catppuccin-macchiato"
+local colorscheme = "nordic"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
 	return
 end
-vim.g.colorscheme = "everforest"
+vim.g.colorscheme = colorscheme
