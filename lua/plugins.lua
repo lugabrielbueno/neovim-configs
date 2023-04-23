@@ -80,13 +80,13 @@ return packer.startup(function(use)
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	--Colors, icons and themes
-	use ({'AlexvZyl/nordic.nvim'})
-	use { "ellisonleao/gruvbox.nvim" }
-
-
-	--	use({ "rmehri01/onenord.nvim" })
-	--use({ "sainnhe/everforest" })
-	--use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "AlexvZyl/nordic.nvim" })
+	use({ "ellisonleao/gruvbox.nvim" })
+	use({ "NTBBloodbath/doom-one.nvim" })
+	use({ "rebelot/kanagawa.nvim" })
+	use({ "rmehri01/onenord.nvim" })
+	use({ "sainnhe/everforest" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use({
 		"nvim-lualine/lualine.nvim",

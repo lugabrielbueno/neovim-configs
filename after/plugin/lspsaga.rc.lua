@@ -5,7 +5,7 @@ end
 lspsaga.setup({
 	preview = {
 		lines_above = 0,
-		lines_below = 10,
+		lines_below = 12,
 	},
 	scroll_preview = {
 		scroll_down = "<C-f>",

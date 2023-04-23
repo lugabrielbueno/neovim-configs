@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -119,6 +124,16 @@ _G.packer_plugins = {
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["doom-one.nvim"] = {
+    loaded = true,
+    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
+    url = "https://github.com/NTBBloodbath/doom-one.nvim"
+  },
+  everforest = {
+    loaded = true,
+    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/everforest",
+    url = "https://github.com/sainnhe/everforest"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -128,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
     url = "https://github.com/ellisonleao/gruvbox.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    loaded = true,
+    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
+    url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lspkind.nvim"] = {
     loaded = true,
@@ -213,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["onenord.nvim"] = {
+    loaded = true,
+    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/onenord.nvim",
+    url = "https://github.com/rmehri01/onenord.nvim"
   },
   ["packer.nvim"] = {
     loaded = false,

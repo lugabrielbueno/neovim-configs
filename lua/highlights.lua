@@ -95,7 +95,14 @@ vim.api.nvim_set_hl(0, "GitSignsAdd", { bg = "NONE", ctermbg = "NONE", fg = "#a3
 vim.api.nvim_set_hl(0, "GitSignsChange", { bg = "NONE", ctermbg = "NONE", fg = "#81a1c1" })
 vim.api.nvim_set_hl(0, "GitSignsDelete", { bg = "NONE", ctermbg = "NONE", fg = "#bf616a" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "FoldColumn", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "CursorColumn", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "SignColumnSB", { bg = "NONE", ctermbg = "NONE" })
+vim.api.nvim_set_hl(0, "LineNR", { bg = "NONE", ctermbg = "NONE", fg = "#6b6b6b" })
+if base.current_colorscheme == "kanagawa" then
+	vim.api.nvim_set_hl(0, "CursorLineNR", { bg = "NONE", ctermbg = "NONE", fg = "#ff9e3b" })
+end
 
 -- Gruvbox colors with transparency
 if base.current_colorscheme == "gruvbox" then
