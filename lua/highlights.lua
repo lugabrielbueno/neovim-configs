@@ -1,3 +1,5 @@
+local base = require("base")
+
 vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermbg = "NONE", bg = "NONE", fg = "NONE" })
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { ctermbg = "NONE", bg = "NONE" })
@@ -6,7 +8,9 @@ vim.api.nvim_set_hl(0, "NormalNC", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "Tabline", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TablineFill", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TablineSel", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "Pmenu", { ctermbg = "NONE", bg = "NONE" })
 
+-- Telescope
 vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeTitle", { ctermbg = "NONE", bg = "NONE" })
@@ -82,6 +86,7 @@ vim.api.nvim_set_hl(0, "DashboardHeader", { bg = "NONE", fg = "#d6d6d6" })
 vim.api.nvim_set_hl(0, "NoiceCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
 vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
 vim.api.nvim_set_hl(0, "NoiceCmdlineIconCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
 
 -- Float diagnostic header
 vim.api.nvim_set_hl(0, "HeaderDiagnosticOpenFloat", { bg = "NONE", fg = "#ffffff", bold = true })
@@ -91,3 +96,14 @@ vim.api.nvim_set_hl(0, "GitSignsChange", { bg = "NONE", ctermbg = "NONE", fg = "
 vim.api.nvim_set_hl(0, "GitSignsDelete", { bg = "NONE", ctermbg = "NONE", fg = "#bf616a" })
 vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE", ctermbg = "NONE" })
 vim.api.nvim_set_hl(0, "SignColumnSB", { bg = "NONE", ctermbg = "NONE" })
+
+-- Gruvbox colors with transparency
+if base.current_colorscheme == "gruvbox" then
+	vim.api.nvim_set_hl(0, "GruvboxYellowSign", { bg = "NONE", ctermbg = "NONE", fg = "#fabd2f" })
+	vim.api.nvim_set_hl(0, "GruvboxRedSign", { bg = "NONE", ctermbg = "NONE", fg = "#fb4934" })
+	vim.api.nvim_set_hl(0, "GruvboxAquaSign", { bg = "NONE", ctermbg = "NONE", fg = "#8ec07c" })
+	vim.api.nvim_set_hl(0, "GruvboxBlueSign", { bg = "NONE", ctermbg = "NONE", fg = "#83a598" })
+	vim.api.nvim_set_hl(0, "GruvboxOrangeSign", { bg = "NONE", ctermbg = "NONE", fg = "#fe8019" })
+	vim.api.nvim_set_hl(0, "GruvboxGreenSign", { bg = "NONE", ctermbg = "NONE", fg = "#b8bb26" })
+	vim.api.nvim_set_hl(0, "GruvboxPurpleSign", { bg = "NONE", ctermbg = "NONE", fg = "#d3869b" })
+end

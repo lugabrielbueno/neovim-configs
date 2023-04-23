@@ -32,10 +32,11 @@ vim.diagnostic.config({
 		source = "always",
 	},
 })
+
 local colorscheme = "gruvbox"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
 	return
 end
-vim.g.colorscheme = colorscheme
+return { current_colorscheme = colorscheme }
