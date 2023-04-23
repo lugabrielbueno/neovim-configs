@@ -81,6 +81,8 @@ return packer.startup(function(use)
 
 	--Colors, icons and themes
 	use ({'AlexvZyl/nordic.nvim'})
+	use { "ellisonleao/gruvbox.nvim" }
+
 
 	--	use({ "rmehri01/onenord.nvim" })
 	--use({ "sainnhe/everforest" })
