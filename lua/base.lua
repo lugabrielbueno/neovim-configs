@@ -12,12 +12,12 @@ vim.opt.relativenumber = false
 vim.opt.cursorline = true
 vim.opt.shell = "zsh"
 vim.opt.mouse = {}
---vim.opt.winblend = 0
---vim.opt.wildoptions = "pum"
+vim.opt.winblend = 0
+vim.opt.wildoptions = "pum"
 --vim.opt.pumblend = 15
 vim.wo.wrap = false
 vim.opt.hidden = false
---vim.opt.background = "dark"
+vim.opt.background = "dark"
 
 vim.diagnostic.config({
 	virtual_text = false,

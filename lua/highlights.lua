@@ -1,8 +1,11 @@
 vim.api.nvim_set_hl(0, "Normal", { ctermbg = "NONE", bg = "NONE" })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermbg = "NONE", bg = "NONE" ,fg="NONE"})
+vim.api.nvim_set_hl(0, "EndOfBuffer", { ctermbg = "NONE", bg = "NONE", fg = "NONE" })
 vim.api.nvim_set_hl(0, "NvimTreeNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalNC", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "Tabline", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TablineFill", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TablineSel", { ctermbg = "NONE", bg = "NONE" })
 
 vim.api.nvim_set_hl(0, "TelescopeNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeBorder", { ctermbg = "NONE", bg = "NONE" })
@@ -12,6 +15,7 @@ vim.api.nvim_set_hl(0, "TelescopeMultiIcon", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeResultsNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePreviewNormal", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePromptNormal", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePromptTitle", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePreviewTitle", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopeResultsTitle", { ctermbg = "NONE", bg = "NONE" })
@@ -19,8 +23,9 @@ vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { ctermbg = "NONE", bg = "NONE"
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { ctermbg = "NONE", bg = "NONE" })
 
---vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = "NONE", bg = "NONE" })
---vim.api.nvim_set_hl(0, "Pmenu", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "FloatShadow", { bg = "#2e3440", blend = 80 })
+vim.api.nvim_set_hl(0, "FloatShadowThrough", { bg = "#2e3440", blend = 100 })
 vim.api.nvim_set_hl(0, "BufferVisibleSign", { ctermbg = "NONE", bg = "NONE" })
 
 -- Warning
@@ -74,9 +79,9 @@ vim.api.nvim_set_hl(0, "DashboardFooter", { bg = "NONE", fg = "#278ead" })
 vim.api.nvim_set_hl(0, "DashboardShortcut", { bg = "NONE", fg = "#278ead" })
 vim.api.nvim_set_hl(0, "DashboardHeader", { bg = "NONE", fg = "#d6d6d6" })
 
-vim.api.nvim_set_hl(0, "NoiceCmdline", { bg = "NONE", fg = "#d6d6d6" })
-vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "NONE", fg = "#d6d6d6" })
-vim.api.nvim_set_hl(0, "NoiceCmdlineIconCmdline", { bg = "NONE", fg = "#d6d6d6" })
+vim.api.nvim_set_hl(0, "NoiceCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
+vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
+vim.api.nvim_set_hl(0, "NoiceCmdlineIconCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
 
 -- Float diagnostic header
 vim.api.nvim_set_hl(0, "HeaderDiagnosticOpenFloat", { bg = "NONE", fg = "#ffffff", bold = true })
