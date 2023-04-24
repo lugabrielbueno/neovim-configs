@@ -80,7 +80,7 @@ cmp.setup({
 		{ name = "nvim_lua" },
 		{ name = "buffer" },
 		{ name = "path" },
-		{ name = "nvim_lsp_signature_help" },
+		--		{ name = "nvim_lsp_signature_help" },
 		--{ name = 'ultisnips' }, -- For ultisnips users.
 		-- { name = 'snippy' }, -- For snippy users.
 	}, {}),
