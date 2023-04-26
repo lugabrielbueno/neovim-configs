@@ -37,6 +37,7 @@ if not loaded_cmp_lsp then
 end
 
 local capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 --setting up all LSP needed
 
@@ -65,11 +66,6 @@ lspconfig.pyright.setup({
 
 lspconfig.intelephense.setup({
 	capabilities = capabilities,
-
-	-- to set null-ls as default formatter
-	--on_attach = function(client)
-	--	client.server_capabilities.documentFormattingProvider = false
-	--end,
 })
 lspconfig.dockerls.setup({ capabilities = capabilities })
 lspconfig.bashls.setup({
@@ -126,15 +122,15 @@ lspconfig.hls.setup({
 })
 local _border = "rounded"
 
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-	border = _border,
-	relative = "win",
-})
+--vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+--	border = _border,
+--	relative = "win",
+--})
 
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-	border = _border,
-	relative = "win",
-})
+--vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+--	border = _border,
+--	relative = "win",
+--})
 
 vim.diagnostic.config({
 	float = { border = _border },
