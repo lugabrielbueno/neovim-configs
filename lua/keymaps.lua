@@ -1,9 +1,10 @@
 local keymap = vim.api.nvim_set_keymap
--- lsp
+-- lsp diagnostics
 keymap("n", "<space>e", ":lua vim.diagnostic.open_float()<cr>", { silent = true, noremap = true })
 keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<cr>", { silent = true, noremap = true })
 keymap("n", "]d", ":lua vim.diagnostic.goto_next()<cr>", { silent = true, noremap = true })
 keymap("n", "<space>q", ":lua vim.diagnostic.setloclist()<cr>", { silent = true, noremap = true })
+-- lsp helpers
 keymap("n", "gD", ":lua vim.lsp.buf.declaration()<cr>", { silent = true, noremap = true })
 keymap("n", "gd", ":lua vim.lsp.buf.definition()<cr>", { silent = true, noremap = true })
 keymap("n", "K", ":lua vim.lsp.buf.hover()<cr>", { silent = true, noremap = true })
@@ -14,7 +15,8 @@ keymap("n", "<space>wr", ":lua vim.lsp.buf.remove_workspace_folder()<cr>", { sil
 keymap("n", "<space>D", ":lua vim.lsp.buf.type_definition()<cr>", { silent = true, noremap = true })
 keymap("n", "<space>rn", ":lua vim.lsp.buf.rename()<cr>", { silent = true, noremap = true })
 keymap("n", "<space>ca", ":lua vim.lsp.buf.code_action()<cr>", { silent = true, noremap = true })
-
+--formatting
+keymap("n", "<space>fm", ":lua vim.lsp.buf.format({ async = true })<cr>", { noremap = true, silent = true })
 --keymap("n", "gr", ":lua vim.lsp.buf.references()<cr>", { silent = true, noremap = true })
 
 -- trouble
@@ -33,13 +35,7 @@ keymap("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true, silent 
 keymap("n", "<leader>fs", ":Telescope live_grep<cr>", { noremap = true, silent = true })
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, silent = true })
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", { noremap = true, silent = true })
---formatting
-vim.api.nvim_set_keymap(
-	"n",
-	"<space>fm",
-	":lua vim.lsp.buf.format({ async = true })<cr>",
-	{ noremap = true, silent = true }
-)
+
 -- new file
 keymap("n", "<leader>n", ":enew<cr>", { noremap = true, silent = true })
 -- navigate between .config files
