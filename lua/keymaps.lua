@@ -1,61 +1,30 @@
 local keymap = vim.api.nvim_set_keymap
--- If there is no definition, it will instead be hidden
--- When you use an action in finder like "open vsplit",
--- you can use <C-t> to jump back
-keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { noremap = true, silent = true })
--- Rename all occurrences of the hovered word for the entire file
-keymap("n", "gr", "<cmd>Lspsaga rename<CR>", { noremap = true, silent = true })
--- Rename all occurrences of the hovered word for the selected files
-keymap("n", "gr", "<cmd>Lspsaga rename ++project<CR>", { noremap = true, silent = true })
--- Use <C-t> to jump back
-keymap("n", "gp", "<cmd>Lspsaga peek_definition<CR>", { noremap = true, silent = true })
--- Go to definition
-keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>", { noremap = true, silent = true })
--- code actions
-keymap("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { noremap = true, silent = true })
--- Peek type definition
--- You can edit the file containing the type definition in the floating window
--- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
--- It also supports tagstack
--- Use <C-t> to jump back
-keymap("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>", { noremap = true, silent = true })
--- Go to type definition
-keymap("n", "gt", "<cmd>Lspsaga goto_type_definition<CR>", { noremap = true, silent = true })
--- Show line diagnostics
--- You can pass argument ++unfocus to
--- unfocus the show_line_diagnostics floating window
-keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>", { noremap = true, silent = true })
--- Show buffer diagnostics
-keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>", { noremap = true, silent = true })
--- Show workspace diagnostics
-keymap("n", "<leader>sw", "<cmd>Lspsaga show_workspace_diagnostics<CR>", { noremap = true, silent = true })
--- Show cursor diagnostics
-keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { noremap = true, silent = true })
--- Diagnostic jump
--- You can use <C-o> to jump back to your previous location
-keymap("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { noremap = true, silent = true })
-keymap("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", { noremap = true, silent = true })
+-- lsp
+keymap("n", "<space>e", ":lua vim.diagnostic.open_float()<cr>", { silent = true, noremap = true })
+keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<cr>", { silent = true, noremap = true })
+keymap("n", "]d", ":lua vim.diagnostic.goto_next()<cr>", { silent = true, noremap = true })
+keymap("n", "<space>q", ":lua vim.diagnostic.setloclist()<cr>", { silent = true, noremap = true })
+keymap("n", "gD", ":lua vim.lsp.buf.declaration()<cr>", { silent = true, noremap = true })
+keymap("n", "gd", ":lua vim.lsp.buf.definition()<cr>", { silent = true, noremap = true })
+keymap("n", "K", ":lua vim.lsp.buf.hover()<cr>", { silent = true, noremap = true })
+keymap("n", "gi", ":lua vim.lsp.buf.implementation()<cr>", { silent = true, noremap = true })
+keymap("n", "<C-k>", ":lua vim.lsp.buf.signature_help()<cr>", { silent = true, noremap = true })
+keymap("n", "<space>wa", ":lua vim.lsp.buf.add_workspace_folder()<cr>", { silent = true, noremap = true })
+keymap("n", "<space>wr", ":lua vim.lsp.buf.remove_workspace_folder()<cr>", { silent = true, noremap = true })
+keymap("n", "<space>D", ":lua vim.lsp.buf.type_definition()<cr>", { silent = true, noremap = true })
+keymap("n", "<space>rn", ":lua vim.lsp.buf.rename()<cr>", { silent = true, noremap = true })
+keymap("n", "<space>ca", ":lua vim.lsp.buf.code_action()<cr>", { silent = true, noremap = true })
 
--- Toggle outline
-keymap("n", "<leader>o", "<cmd>Lspsaga outline<CR>", { noremap = true, silent = true })
--- Hover Doc
--- If there is no hover doc,
--- there will be a notification stating that
--- there is no information available.
--- To disable it just use ":Lspsaga hover_doc ++quiet"
--- Pressing the key twice will enter the hover window
-keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>", { noremap = true, silent = true })
--- If you want to keep the hover window in the top right hand corner,
--- you can pass the ++keep argument
--- Note that if you use hover with ++keep, pressing this key again will
--- close the hover window. If you want to jump to the hover window
--- you should use the wincmd command "<C-w>w"
-keymap("n", "<C-K>", "<cmd>Lspsaga hover_doc ++keep<CR>", { noremap = true, silent = true })
--- Call hierarchy
-keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>", { noremap = true, silent = true })
-keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>", { noremap = true, silent = true })
--- Floating terminal
-keymap("n", "<A-d>", "<cmd>Lspsaga term_toggle<CR>", { noremap = true, silent = true })
+--keymap("n", "gr", ":lua vim.lsp.buf.references()<cr>", { silent = true, noremap = true })
+
+-- trouble
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", { silent = true, noremap = true })
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, noremap = true })
+
 -- nvim tree
 keymap("n", "<c-t>", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
 keymap("n", "<c-f>", ":NvimTreeFocus<cr>", { noremap = true, silent = true })

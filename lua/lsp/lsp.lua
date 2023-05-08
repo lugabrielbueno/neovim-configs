@@ -31,6 +31,14 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+local border = "rounded"
+
+-- LSP settings (for overriding per client)
+local handlers = {
+	["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = border }),
+	["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = border }),
+}
+
 local loaded_cmp_lsp, cmp_lsp = pcall(require, "cmp_nvim_lsp")
 if not loaded_cmp_lsp then
 	return
@@ -42,6 +50,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 --setting up all LSP needed
 
 lspconfig.lua_ls.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
@@ -57,6 +66,7 @@ lspconfig.lua_ls.setup({
 	},
 })
 lspconfig.pyright.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
@@ -65,10 +75,16 @@ lspconfig.pyright.setup({
 })
 
 lspconfig.intelephense.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 })
-lspconfig.dockerls.setup({ capabilities = capabilities })
+lspconfig.dockerls.setup({
+
+	handlers = handlers,
+	capabilities = capabilities,
+})
 lspconfig.bashls.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
@@ -76,6 +92,7 @@ lspconfig.bashls.setup({
 	end,
 })
 lspconfig.tsserver.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
@@ -84,22 +101,23 @@ lspconfig.tsserver.setup({
 })
 --lspconfig.stylelint_lsp.setup {capabilities = capabilities }
 lspconfig.html.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
 		client.server_capabilities.documentFormattingProvider = false
 	end,
 })
-lspconfig.cmake.setup({ capabilities = capabilities })
-lspconfig.lemminx.setup({ capabilities = capabilities })
+lspconfig.cmake.setup({
+	handlers = handlers,
+	capabilities = capabilities,
+})
+lspconfig.lemminx.setup({
+	handlers = handlers,
+	capabilities = capabilities,
+})
 lspconfig.vuels.setup({
-	capabilities = capabilities,
-	-- to set null-ls as default formatter
-	on_attach = function(client)
-		client.server_capabilities.documentFormattingProvider = false
-	end,
-})
-lspconfig.dockerls.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
@@ -107,6 +125,7 @@ lspconfig.dockerls.setup({
 	end,
 })
 lspconfig.bashls.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
@@ -114,24 +133,10 @@ lspconfig.bashls.setup({
 	end,
 })
 lspconfig.hls.setup({
+	handlers = handlers,
 	capabilities = capabilities,
 	-- to set null-ls as default formatter
 	on_attach = function(client)
 		client.server_capabilities.documentFormattingProvider = false
 	end,
-})
-local _border = "rounded"
-
---vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
---	border = _border,
---	relative = "win",
---})
-
---vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
---	border = _border,
---	relative = "win",
---})
-
-vim.diagnostic.config({
-	float = { border = _border },
 })

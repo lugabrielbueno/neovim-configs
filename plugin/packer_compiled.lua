@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
-  ["doom-one.nvim"] = {
-    loaded = true,
-    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/doom-one.nvim",
-    url = "https://github.com/NTBBloodbath/doom-one.nvim"
-  },
   everforest = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/everforest",
@@ -153,11 +148,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
     url = "https://github.com/onsails/lspkind.nvim"
-  },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -264,6 +254,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabe/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/gabe/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   }
 }
 

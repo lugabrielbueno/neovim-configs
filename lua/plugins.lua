@@ -77,8 +77,7 @@ return packer.startup(function(use)
 			"rcarriga/nvim-notify",
 		},
 	})
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
-
+	use({ "folke/trouble.nvim" })
 	--Colors, icons and themes
 	use({ "AlexvZyl/nordic.nvim" })
 	use({ "ellisonleao/gruvbox.nvim" })
