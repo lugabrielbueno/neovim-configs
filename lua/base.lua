@@ -18,7 +18,7 @@ vim.opt.wildoptions = "pum"
 --vim.opt.pumblend = 15
 vim.wo.wrap = false
 vim.opt.hidden = false
---vim.opt.background = "dark"
+vim.opt.background = "dark"
 
 vim.diagnostic.config({
 	virtual_text = false,
@@ -34,7 +34,7 @@ vim.diagnostic.config({
 	},
 })
 
-local colorscheme = "catppuccin-frappe"
+local colorscheme = "gruvbox"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
