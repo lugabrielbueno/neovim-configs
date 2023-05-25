@@ -18,6 +18,26 @@ local i = ls.insert_node
 --local lambda = require("luasnip.extras").l
 --local postfix = require("luasnip.extras.postfix").postfix
 
+ls.add_snippets("html", {
+	s("html", {
+		t({ "<!DOCTYPE html>", "" }),
+		t({ "<html lang='en'>", "" }),
+		t({ "<head>", "" }),
+		t({ "  <meta charset='UTF-8'>", "" }),
+		t({ "  <meta http-equiv='X-UA-Compatible' content='IE=edge'>", "" }),
+		t({ "  <meta name='viewport' content='width=device-width, initial-scale=1.0'>", "" }),
+		t({ "  <title>" }),
+		i(1),
+		t({ "</title>", "" }),
+		t({ "</head>", "" }),
+		t({ "<body>", "" }),
+		i(0),
+		t({ "", "</body>", "" }),
+		t({ "</html>" }),
+	}),
+}, {
+	key = "html",
+})
 ls.add_snippets("php", {
 	s("debug", {
 		t({ "ini_set('display_errors',1);" }),

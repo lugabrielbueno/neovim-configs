@@ -10,7 +10,6 @@ local ensure_packer = function()
 		vim.cmd([[packadd packer.nvim]])
 		return true
 	end
-
 	packer.init({
 		snapshot_path = fn.stdpath("config") .. "/snapshots",
 		max_jobs = 50,
@@ -21,7 +20,6 @@ local ensure_packer = function()
 			prompt_border = "rounded", -- Border style of prompt popups.
 		},
 	})
-
 	return false
 end
 
