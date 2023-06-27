@@ -5,7 +5,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.smarttab = true
-vim.opt.textwidth = 40
+vim.opt.textwidth = 150
 vim.opt.encoding = "UTF-8"
 vim.opt.syntax = "enable"
 vim.opt.termguicolors = true
@@ -34,7 +34,7 @@ vim.diagnostic.config({
 	},
 })
 
-local colorscheme = "everforest"
+local colorscheme = "onenord"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
