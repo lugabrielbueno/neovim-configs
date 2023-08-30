@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/gabriel/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/gabriel/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/gabriel/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/gabriel/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/gabriel/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/gabriel/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?.lua;/home/gabriel/.cache/nvim/packer_hererocks/2.1.1692616192/share/lua/5.1/?/init.lua;/home/gabriel/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?.lua;/home/gabriel/.cache/nvim/packer_hererocks/2.1.1692616192/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/gabriel/.cache/nvim/packer_hererocks/2.1.1692616192/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -264,10 +264,20 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["vim-php-namespace"] = {
+    config = { "\27LJ\2\nG\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0*vim_php_namespace_use_getters_setters\6g\bvim\0" },
+    loaded = true,
+    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-php-namespace",
+    url = "https://github.com/arnaud-lb/vim-php-namespace"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: vim-php-namespace
+time([[Config for vim-php-namespace]], true)
+try_loadstring("\27LJ\2\nG\0\0\2\0\3\0\0056\0\0\0009\0\1\0)\1\1\0=\1\2\0K\0\1\0*vim_php_namespace_use_getters_setters\6g\bvim\0", "config", "vim-php-namespace")
+time([[Config for vim-php-namespace]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

@@ -206,6 +206,6 @@ if not loaded_not then
 	return
 end
 notify.setup({
-	--background_colour = "#ffffff",
+	background_colour = "#ffffff",
 	-- add any options here
 })

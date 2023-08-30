@@ -86,6 +86,13 @@ return packer.startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use({
+		"arnaud-lb/vim-php-namespace",
+		config = function()
+			vim.g.vim_php_namespace_use_getters_setters = 1
+		end,
+	})
+
+	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})

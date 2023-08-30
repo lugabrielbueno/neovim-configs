@@ -19,6 +19,8 @@ keymap("n", "<space>ca", ":lua vim.lsp.buf.code_action()<cr>", { silent = true, 
 keymap("n", "<space>fm", ":lua vim.lsp.buf.format({ async = true })<cr>", { noremap = true, silent = true })
 --keymap("n", "gr", ":lua vim.lsp.buf.references()<cr>", { silent = true, noremap = true })
 
+keymap("n", "<space>gs", ":lua require('functions').generateGettersAndSetters()<cr>", { noremap = true, silent = true })
+
 -- trouble
 keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true, noremap = true })
 keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })

@@ -15,7 +15,7 @@ vim.opt.shell = "zsh"
 vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
---vim.opt.pumblend = 15
+vim.opt.pumblend = 0
 vim.wo.wrap = false
 vim.opt.hidden = false
 vim.opt.background = "dark"
@@ -34,7 +34,7 @@ vim.diagnostic.config({
 	},
 })
 
-local colorscheme = "onenord"
+local colorscheme = "everforest"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")

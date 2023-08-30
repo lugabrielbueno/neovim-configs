@@ -88,6 +88,8 @@ vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "NONE", ctermbg = "NONE", fg 
 vim.api.nvim_set_hl(0, "NoiceCmdlineIconCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
 vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorderCmdline", { bg = "NONE", ctermbg = "NONE", fg = "#d6d6d6" })
 
+vim.api.nvim_set_hl(0, "NotifyBackground", { bg = "NONE", ctermbg = "NONE", fg = "#6b6b6b" })
+
 -- Float diagnostic header
 vim.api.nvim_set_hl(0, "HeaderDiagnosticOpenFloat", { bg = "NONE", fg = "#ffffff", bold = true })
 
