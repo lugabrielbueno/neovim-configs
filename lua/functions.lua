@@ -6,7 +6,7 @@ function generateGettersAndSetters()
 
 	if attribute then
 		-- Generate the getter and setter methods
-		local setter = "\n\n  /**\n * @param $" .. attribute .. "\n * @return\n **/\n"
+		local setter = "\n\n  /**\n    * @param $" .. attribute .. "\n    * @return self\n    **/\n"
 		setter = setter
 			.. "    function set"
 			.. attribute:sub(1, 1):upper()
@@ -19,10 +19,10 @@ function generateGettersAndSetters()
 			.. " = $"
 			.. attribute
 			.. ";\n"
-			.. "    return;\n"
+			.. "    return $this;\n"
 			.. "    }"
 
-		local getter = "\n\n    /**\n * @return\n **/\n"
+		local getter = "\n\n    /**\n    * @return\n    **/\n"
 		getter = getter
 			.. "    function get"
 			.. attribute:sub(1, 1):upper()
