@@ -8,7 +8,7 @@ function generateGettersAndSetters()
 		-- Generate the getter and setter methods
 		local setter = "\n\n  /**\n    * @param $" .. attribute .. "\n    * @return self\n    **/\n"
 		setter = setter
-			.. "    function set"
+			.. "    public function set"
 			.. attribute:sub(1, 1):upper()
 			.. attribute:sub(2)
 			.. "($"
@@ -24,7 +24,7 @@ function generateGettersAndSetters()
 
 		local getter = "\n\n    /**\n    * @return\n    **/\n"
 		getter = getter
-			.. "    function get"
+			.. "    public function get"
 			.. attribute:sub(1, 1):upper()
 			.. attribute:sub(2)
 			.. "()\n    {\n"
