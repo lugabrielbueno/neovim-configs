@@ -84,6 +84,7 @@ return packer.startup(function(use)
 	use({ "rmehri01/onenord.nvim" })
 	use({ "sainnhe/everforest" })
 	use({ "catppuccin/nvim", as = "catppuccin" })
+	use({ "norcalli/nvim-colorizer.lua" })
 
 	use({
 		"arnaud-lb/vim-php-namespace",

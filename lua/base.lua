@@ -34,7 +34,7 @@ vim.diagnostic.config({
 	},
 })
 
-local colorscheme = "everforest"
+local colorscheme = "catppuccin-mocha"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")
