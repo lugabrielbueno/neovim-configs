@@ -11,7 +11,7 @@ vim.opt.syntax = "enable"
 vim.opt.termguicolors = true
 vim.opt.relativenumber = false
 vim.opt.cursorline = true
-vim.opt.shell = "zsh"
+vim.opt.shell = "fish"
 vim.opt.mouse = {}
 vim.opt.winblend = 0
 vim.opt.wildoptions = "pum"
@@ -34,7 +34,7 @@ vim.diagnostic.config({
 	},
 })
 
-local colorscheme = "catppuccin-mocha"
+local colorscheme = "nordic"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")

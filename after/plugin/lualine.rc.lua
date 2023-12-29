@@ -72,4 +72,4 @@ local default = {
 	extensions = {},
 }
 
-lualine.setup(bubble)
+lualine.setup(default)
