@@ -27,6 +27,12 @@ vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { ctermbg = "NONE", bg = "NONE"
 vim.api.nvim_set_hl(0, "TelescopePromptBorder", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { ctermbg = "NONE", bg = "NONE" })
 
+--vim.api.nvim_set_hl(0, "IncSearch", { ctermbg = "NONE", bg = "NONE" })
+--vim.api.nvim_set_hl(0, "Search", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "NoiceCmdLineIconSearch", { ctermbg = "NONE", bg = "NONE" })
+vim.api.nvim_set_hl(0, "NoiceCmdLinePopupBorderSearch", { ctermbg = "NONE", bg = "NONE" })
+--vim.api.nvim_set_hl(0, "Search", { ctermbg = "NONE", bg = "NONE" })
+
 vim.api.nvim_set_hl(0, "FloatBorder", { ctermbg = "NONE", bg = "NONE" })
 vim.api.nvim_set_hl(0, "FloatShadow", { bg = "#2e3440", blend = 80 })
 vim.api.nvim_set_hl(0, "FloatShadowThrough", { bg = "#2e3440", blend = 100 })

@@ -83,6 +83,28 @@ ls.add_snippets("php", {
 		t({ "", "</body>", "" }),
 		t({ "</html>" }),
 	}),
+	s("trycatch", {
+		t({ "try {", "" }),
+		t({ "", "$db->getConnection()->beginTransaction();" }),
+		i(1),
+		t({ "", "$db->getConnection()->commit();" }),
+		i(0),
+		t({ "", "} catch(Exception $e){ " }),
+		t({ "", "$db->getConnection()->rollBack(); " }),
+		t({ "", "AlertMessage::addFlashMessage($e->getMessage(),'warning'); " }),
+		t({ "", 'header("Location: ?id="); ' }),
+		t({ "", "exit();" }),
+		t({ "", "}catch (\\Throwable $th){" }),
+		t({ "", "$db->getConnection()->rollBack();" }),
+		t({ "", "Log::gerarLog($th->getMessage().' | '.$th->getLine(),'error');" }),
+		t({
+			"",
+			"AlertMessage::addFlashMessage('Não foi possivel finalizar esta ação, tente novamente.','danger');",
+		}),
+		t({ "", 'header("Location: ?id=");' }),
+		t({ "", "exit();" }),
+		t({ "", "} " }),
+	}),
 }, {
 	key = "php",
 })
