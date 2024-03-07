@@ -19,6 +19,7 @@ vim.opt.pumblend = 0
 vim.wo.wrap = false
 vim.opt.hidden = false
 vim.opt.background = "dark"
+vim.opt.leader = " "
 
 vim.diagnostic.config({
 	virtual_text = false,
@@ -34,7 +35,7 @@ vim.diagnostic.config({
 	},
 })
 
-local colorscheme = "nordic"
+local colorscheme = "catppuccin"
 local loaded_colorscheme, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not loaded_colorscheme then
 	vim.notify("colorscheme " .. colorscheme .. " not found")

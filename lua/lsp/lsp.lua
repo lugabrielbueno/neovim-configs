@@ -1,23 +1,11 @@
 --LSP installer plugin
-local loaded_lsp_installer, lsp_installer = pcall(require, "nvim-lsp-installer")
 local loaded_mason, mason = pcall(require, "mason")
 
-if not loaded_lsp_installer or not loaded_mason then
+if loaded_mason then
 	return
 end
 
 mason.setup()
-lsp_installer.setup({
-	automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
-	ui = {
-		border = "rounded",
-		icons = {
-			server_installed = "✓",
-			server_pending = "➜",
-			server_uninstalled = "✗",
-		},
-	},
-})
 
 ---- symbols to LSP dignostic
 local loaded_config, lspconfig = pcall(require, "lspconfig")

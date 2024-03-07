@@ -1,4 +1,4 @@
-local loaded,treesitter = pcall(require,'nvim-treesitter.configs')
+local loaded, treesitter = pcall(require, "nvim-treesitter.configs")
 if not loaded then
 	return
 end

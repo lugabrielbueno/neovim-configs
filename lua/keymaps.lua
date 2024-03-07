@@ -1,8 +1,8 @@
 local keymap = vim.api.nvim_set_keymap
 -- lsp diagnostics
 keymap("n", "<space>e", ":lua vim.diagnostic.open_float()<cr>", { silent = true, noremap = true })
-keymap("n", "[d", ":lua vim.diagnostic.goto_prev()<cr>", { silent = true, noremap = true })
-keymap("n", "]d", ":lua vim.diagnostic.goto_next()<cr>", { silent = true, noremap = true })
+keymap("n", "<C-k>", ":lua vim.diagnostic.goto_prev()<cr>", { silent = true, noremap = true })
+keymap("n", "<C-j>", ":lua vim.diagnostic.goto_next()<cr>", { silent = true, noremap = true })
 keymap("n", "<space>q", ":lua vim.diagnostic.setloclist()<cr>", { silent = true, noremap = true })
 -- lsp helpers
 keymap("n", "gD", ":lua vim.lsp.buf.declaration()<cr>", { silent = true, noremap = true })
@@ -33,8 +33,8 @@ keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", { silent = true, nore
 keymap("n", "<c-t>", ":NvimTreeToggle<cr>", { noremap = true, silent = true })
 keymap("n", "<c-f>", ":NvimTreeFocus<cr>", { noremap = true, silent = true })
 --Find files using Telescope command-line sugar.
-keymap("n", "<leader>ff", ":Telescope find_files<cr>", { noremap = true, silent = true })
-keymap("n", "<leader>fs", ":Telescope live_grep<cr>", { noremap = true, silent = true })
+keymap("n", "<leader><space>", ":Telescope find_files<cr>", { noremap = true, silent = true })
+keymap("n", "<leader>/", ":Telescope live_grep<cr>", { noremap = true, silent = true })
 keymap("n", "<leader>fb", ":Telescope buffers<cr>", { noremap = true, silent = true })
 keymap("n", "<leader>fh", ":Telescope help_tags<cr>", { noremap = true, silent = true })
 
@@ -43,7 +43,7 @@ keymap("n", "<leader>n", ":enew<cr>", { noremap = true, silent = true })
 -- navigate between .config files
 keymap("n", "<leader>fd", ":edit ~/.config<cr>", { noremap = true, silent = true })
 -- vertical and horizontal splits
-keymap("n", "<leader>vs", ":vsplit<cr>", { noremap = true, silent = true })
-keymap("n", "<leader>hs", ":split<cr>", { noremap = true, silent = true })
+keymap("n", "ss", ":split<cr>", { noremap = true, silent = true })
+keymap("n", "vs", ":vsplit<cr>", { noremap = true, silent = true })
 --jump or expand snippets
 vim.cmd("imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>' ")
