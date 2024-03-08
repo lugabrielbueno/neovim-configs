@@ -19,7 +19,7 @@ vim.opt.pumblend = 0
 vim.wo.wrap = false
 vim.opt.hidden = false
 vim.opt.background = "dark"
-vim.opt.leader = " "
+vim.g.mapleader = " "
 
 vim.diagnostic.config({
 	virtual_text = false,
