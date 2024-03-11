@@ -4,7 +4,19 @@ if not loaded then
 end
 
 treesitter.setup({
-	ensure_installed = "all",
+	ensure_installed = {
+		"python",
+		"php",
+		"javascript",
+		"typescript",
+		"ruby",
+		"go",
+		"elixir",
+		"kotlin",
+		"typescript",
+		"json",
+		"markdown",
+	},
 	autotag = { enable = true },
 	highlight = { enable = true },
 	indent = { enable = true },

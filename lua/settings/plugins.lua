@@ -35,11 +35,7 @@ return packer.startup(function(use)
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" })
-	use({ "williamboman/nvim-lsp-installer" })
-	use({
-		"williamboman/mason.nvim",
-		run = ":MasonUpdate", -- :MasonUpdate updates registry contents
-	})
+	use({ "williamboman/mason.nvim", run = ":MasonUpdate" })
 	use({ "onsails/lspkind.nvim" })
 	use({ "hrsh7th/cmp-nvim-lsp" })
 
@@ -50,13 +46,14 @@ return packer.startup(function(use)
 		tag = "v<CurrentMajor>.*",
 		run = "make install_jsregexp",
 	})
+	use({ "ray-x/lsp_signature.nvim" })
 	use({ "hrsh7th/nvim-cmp" })
 	use({ "hrsh7th/cmp-buffer" })
-	use({ "saadparwaiz1/cmp_luasnip" })
 	use({ "hrsh7th/cmp-path" })
 	use({ "hrsh7th/cmp-cmdline" })
-	use({ "ray-x/cmp-treesitter" })
 	use({ "hrsh7th/cmp-nvim-lua" })
+	use({ "saadparwaiz1/cmp_luasnip" })
+	use({ "ray-x/cmp-treesitter" })
 	use({ "jose-elias-alvarez/null-ls.nvim", requires = { { "nvim-lua/plenary.nvim" } } })
 
 	--Finder

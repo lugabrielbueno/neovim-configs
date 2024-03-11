@@ -10,7 +10,6 @@ cmp.setup({
 	formatting = {
 		format = require("lspkind").cmp_format({
 			mode = "symbol_text",
-
 			menu = {
 				nvim_lsp = "[LSP]",
 				treesitter = "[Tree-sitter]",
@@ -78,8 +77,8 @@ cmp.setup({
 		{ name = "nvim_lua" },
 		{ name = "buffer" },
 		{ name = "path" },
-		--{ name = "treesitter" },
 		--{ name = "nvim_lsp_signature_help" },
+		--{ name = "treesitter" },
 		--{ name = 'ultisnips' }, -- For ultisnips users.
 		--{ name = 'snippy' }, -- For snippy users.
 	}, {}),

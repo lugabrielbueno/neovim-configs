@@ -1,12 +1,3 @@
---LSP installer plugin
-local loaded_mason, mason = pcall(require, "mason")
-
-if loaded_mason then
-	return
-end
-
-mason.setup()
-
 ---- symbols to LSP dignostic
 local loaded_config, lspconfig = pcall(require, "lspconfig")
 if not loaded_config then
