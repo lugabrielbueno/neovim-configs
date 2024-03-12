@@ -43,7 +43,7 @@ dashboard.setup({
 				desc = "Find Files           ",
 				desc_hl = "String",
 				key = "f",
-				keymap = "   <leader> <space> ",
+				keymap = "   <leader> ff  ",
 				action = ":Telescope find_files",
 			},
 			{
@@ -52,7 +52,7 @@ dashboard.setup({
 				desc = "Find String          ",
 				desc_hl = "String",
 				key = "s",
-				keymap = "   <leader> / ",
+				keymap = "   <leader> lg  ",
 				action = ":Telescope live_grep",
 			},
 			{
