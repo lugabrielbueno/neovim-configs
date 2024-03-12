@@ -11,6 +11,7 @@ treesitter.setup({
 		"typescript",
 		"ruby",
 		"go",
+		"html",
 		"elixir",
 		"kotlin",
 		"typescript",
